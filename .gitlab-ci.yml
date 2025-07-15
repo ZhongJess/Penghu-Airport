@@ -1,0 +1,85 @@
+variables:
+    MoveProjectToolDir: 'C:\deployTools\MoveProject'
+    NuGetDir: 'C:\deployTools\nuget'
+    NuGetSpecGeneratorDir: 'C:\deployTools\nuspecgen'
+    NuGetConfigFile: 'C:\deployTools\nuget\nuget.config'
+    # 版本號
+    VersionNumber: '2.8.3'
+
+stages:
+    - build
+    - deploy
+
+build_job:
+    stage: build
+    script:
+        - $TargetPath = $TargetPath + "\dev"
+        - $buildPath = ($CI_BUILDS_DIR + "\" + $CI_RUNNER_SHORT_TOKEN + "\" + $CI_CONCURRENT_ID + "\" + $CI_PROJECT_NAMESPACE + "\" + $CI_PROJECT_NAME)
+        - $gitParams = ("--git.url " + $CI_REPOSITORY_URL + " --git.branch " + $CI_COMMIT_BRANCH + " --git.sha " + $CI_COMMIT_SHA + " --git.shortsha " + $CI_COMMIT_SHORT_SHA)
+        - $packageParams = ("--n $PackageID --t $PackageTitle --a ""Design Team"" --o ""KINGFOR Information Co. Ltd."" --d ""$PackageDescription"" --c ""(C) 2021 Kingfor Information Co. Ltd. All Rights Reserved."" --l false --s ""$buildPath"" --v ""$VersionNumber.$CI_PIPELINE_ID""")
+        - $nuspecGenCmd = ($NuGetSpecGeneratorDir + "\nuspecgen.exe " + $packageParams + " " + $gitParams)
+        - Write-Host $nuspecGenCmd
+        # build nuspec file.
+        - iex $nuspecGenCmd
+        - $nugetCmd = ($NuGetDir + "\nuget.exe pack $buildPath" + "\package.nuspec")
+        - iex $nugetCmd
+        #copy nupkg to artifact.
+        - $nupkgSrc = ($buildPath + "\*.nupkg")
+        - xcopy /c $nupkgSrc "\\192.168.1.76\artifacts"
+        # push nupkg
+        - $nugetSetKeyCmd = ($NuGetDir + "\nuget.exe setApiKey " + $NuGetServerApiKey + " -Source " + $NuGetServerUrl + " -Verbosity quiet")
+        - iex $nugetSetKeyCmd
+        - $nugetPushCmd = ($NuGetDir + "\nuget.exe push $buildPath" + "\" + $PackageID + ".$VersionNumber.$CI_PIPELINE_ID.nupkg -Source " + $NuGetServerUrl)
+        - iex $nugetPushCmd
+    only:
+        - /^dev/i
+
+build_job_master:
+    stage: build
+    script:
+        - $TargetPath = $TargetPath + "\master"
+        - $buildPath = ($CI_BUILDS_DIR + "\" + $CI_RUNNER_SHORT_TOKEN + "\" + $CI_CONCURRENT_ID + "\" + $CI_PROJECT_NAMESPACE + "\" + $CI_PROJECT_NAME)
+        - $gitParams = ("--git.url " + $CI_REPOSITORY_URL + " --git.branch " + $CI_COMMIT_BRANCH + " --git.sha " + $CI_COMMIT_SHA + " --git.shortsha " + $CI_COMMIT_SHORT_SHA)
+        - $packageParams = ("--n $PackageID --t ""$PackageTitle"" --a ""Design Team"" --o ""KINGFOR Information Co. Ltd."" --d ""$PackageDescription"" --c ""(C) 2021 Kingfor Information Co. Ltd. All Rights Reserved."" --l false --s ""$buildPath"" --v ""$VersionNumber.$CI_PIPELINE_ID""")
+        - $nuspecGenCmd = ($NuGetSpecGeneratorDir + "\nuspecgen.exe " + $packageParams + " " + $gitParams)
+        - Write-Host $nuspecGenCmd
+        # build nuspec file.
+        - iex $nuspecGenCmd
+        - $nugetCmd = ($NuGetDir + "\nuget.exe pack $buildPath" + "\package.nuspec")
+        - iex $nugetCmd
+        #copy nupkg to artifact.
+        - $nupkgSrc = ($buildPath + "\*.nupkg")
+        - xcopy /c $nupkgSrc "\\192.168.1.76\artifacts"
+        # push nupkg
+        - $nugetSetKeyCmd = ($NuGetDir + "\nuget.exe setApiKey " + $NuGetServerApiKey + " -Source " + $NuGetServerUrl + " -Verbosity quiet")
+        - iex $nugetSetKeyCmd
+        - $nugetPushCmd = ($NuGetDir + "\nuget.exe push $buildPath" + "\" + $PackageID + ".$VersionNumber.$CI_PIPELINE_ID.nupkg -Source " + $NuGetServerUrl)
+        - iex $nugetPushCmd
+    only:
+        - /^master/i
+
+deploy_job:
+    stage: deploy
+    script:
+        - $TargetPath = $TargetPath + "\dev"
+        - $clearCmd = ($MoveProjectToolDir + "\ClearProject.exe -t ""$TargetPath""")
+        - $copyCmd = ($MoveProjectToolDir + "\MoveProject.exe -f $CI_PROJECT_DIR -t ""$TargetPath"" -e "".git|prepros.config|prepros-6.config""")
+        # clear target folder.
+        - iex $clearCmd
+        # copy artifacts to target folder.
+        - iex $copyCmd
+    only:
+        - /^dev/i
+
+deploy_job_master:
+    stage: deploy
+    script:
+        - $TargetPath = $TargetPath + "\master"
+        - $clearCmd = ($MoveProjectToolDir + "\ClearProject.exe -t ""$TargetPath""")
+        - $copyCmd = ($MoveProjectToolDir + "\MoveProject.exe -f $CI_PROJECT_DIR -t ""$TargetPath"" -e "".git|prepros.config|prepros-6.config""")
+        # clear target folder.
+        - iex $clearCmd
+        # copy artifacts to target folder.
+        - iex $copyCmd
+    only: 
+        - /^master/i
