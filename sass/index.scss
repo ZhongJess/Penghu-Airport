@@ -283,6 +283,7 @@ section.ebus .title h2 {
     text-align: center;
     color: #464546;
     line-height: 1;
+    margin-bottom: 36px;
 }
 
 section.ebus .subtitle {
@@ -292,6 +293,7 @@ section.ebus .subtitle {
     font-weight: bold;
     text-align: center;
     color: #464546;
+    margin-bottom: 36px;
 }
 
 section.ebus .busform {
@@ -309,6 +311,7 @@ section.ebus .busform .timetable {
     gap: 20px;
     background-color: #f9f9f9;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 section.ebus .busform .timetable .pic {
@@ -389,7 +392,7 @@ section.ebus .busform .station {
 
 section.ebus .busform .station .row {
     display: flex;
-    margin-bottom: 110px;
+
 }
 
 
@@ -2144,3 +2147,187 @@ section.ebus .busform .station .row .on .num::before {
 
 
 
+@media (min-width: 992px) {
+    .nav_top_wrap a {
+        font-size: .75em;
+        line-height: 2.5;
+    }
+}
+
+.nav_lang_wrap {
+    position: relative;
+    z-index: 12;
+    margin-left: .75rem;
+     border: 1px solid #000000;
+     border-radius: .5rem;
+
+}
+
+.nav_lang_parent {
+    position: relative;
+    display: block;
+    padding: 0 1.75rem 0 .75rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+}
+
+.nav_lang a {
+    position: relative;
+    display: block;
+    padding: .5rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.nav_lang li:hover {
+    background-color: #f0f0f0;
+    color: #005bb5;
+}
+.nav_lang li:hover {
+    background-color: #f0f0f0;
+    color: #005bb5;
+}
+
+
+.nav_lang_parent:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 6px);
+    right: .5rem;
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/nav_lang_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+.nav_lang {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.nav_lang.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+// .nav_lang ul {
+//     // visibility: hidden;
+//     // overflow: hidden;
+//     position: absolute;
+//     width: 100%;
+//     margin-top: -20px;
+//     background-color: #fff;
+//     border: 1px solid #3c3c3c;
+//     opacity: 0;
+//     -webkit-transition: all .5s ease-in-out;
+//     transition: all .5s ease-in-out;
+// }
+
+.right .lang nav a  {
+    position: relative;
+    display: block;
+    padding: .5rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+@media (min-width: 992px) {
+    .nav_top_wrap a {
+        font-size: .75em;
+        line-height: 2.5;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav_top_wrap a:focus:not(:focus-visible) {
+        outline: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav_top_wrap a:focus {
+        outline-offset: -2px;
+        outline: 2px dotted #ffcc02;
+    }
+}
+
+
+.nav_lang_parent {
+    color: #005bb5;
+    background-color: #ffffe9;
+    text-decoration: none;
+}
+
+.nav_lang_parent:hover, .nav_lang_parent:focus {
+    color: #005bb5;
+    background-color: #ffffe9;
+    text-decoration: none;
+}
+
+
+
+@media (min-width: 992px) {
+    .nav_top_wrap a {
+        font-size: .75em;
+        line-height: 2.5;
+    }
+}
+
+.right .lang nav a {
+    position: relative;
+    display: block;
+    padding-top: 0px;
+    padding-right: 28px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    color: #000000;
+    line-height: 2.5;
+
+
+}
+
+
+
+.header .lang a:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}
+
+
+.nav_lang_parent:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 6px);
+    right: .5rem;
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/nav_lang_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.lang-open:after {
+    background: url(../images/nav_lang_arrow-hover.svg) no-repeat center;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}

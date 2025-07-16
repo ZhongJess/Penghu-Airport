@@ -1311,29 +1311,3 @@
   }
 }
 /*# sourceMappingURL=animate.css.map */
-
-@keyframes busShake {
-  0%, 100% {
-    transform: translateX(0) rotate(0);
-  }
-  20% {
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  40% {
-    transform: translateX(2px) rotate(1deg);
-  }
-  60% {
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  80% {
-    transform: translateX(2px) rotate(1deg);
-  }
-}
-
-@keyframes swimPath {
-  0%   { transform: translate(0, 0); }
-  25%  { transform: translate(5px, -2px); }
-  50%  { transform: translate(10px, 0); }
-  75%  { transform: translate(5px, 2px); }
-  100% { transform: translate(0, 0); }
-}

@@ -277,6 +277,7 @@ section.ebus .title h2 {
   text-align: center;
   color: #464546;
   line-height: 1;
+  margin-bottom: 36px;
 }
 
 section.ebus .subtitle {
@@ -286,6 +287,7 @@ section.ebus .subtitle {
   font-weight: bold;
   text-align: center;
   color: #464546;
+  margin-bottom: 36px;
 }
 
 section.ebus .busform {
@@ -303,6 +305,7 @@ section.ebus .busform .timetable {
   gap: 20px;
   background-color: #f9f9f9;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 section.ebus .busform .timetable .pic {
@@ -371,7 +374,6 @@ section.ebus .busform .return::after {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
-  animation: swimPath 4s infinite ease-in-out;
 }
 
 section.ebus .busform .station {
@@ -383,7 +385,6 @@ section.ebus .busform .station {
 
 section.ebus .busform .station .row {
   display: flex;
-  margin-bottom: 110px;
 }
 
 section.ebus .busform .station .row .bus {
@@ -1954,7 +1955,6 @@ section.ebus .busform .station .return ::after {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
-  animation: swimPath 4s infinite ease-in-out;
 }
 
 section.ebus .busform .station .row .on .num::before {
@@ -1968,17 +1968,193 @@ section.ebus .busform .station .row .on .num::before {
   width: 126px;
   height: 69px;
   animation: busShake 1s infinite;
+}
+
+@media (min-width: 992px) {
+  .nav_top_wrap a {
+    font-size: 0.75em;
+    line-height: 2.5;
+  }
+}
+.nav_lang_wrap {
+  position: relative;
+  z-index: 12;
+  margin-left: 0.75rem;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+}
+
+.nav_lang_parent {
+  position: relative;
+  display: block;
+  padding: 0 1.75rem 0 0.75rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+}
+
+.nav_lang a {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.nav_lang li:hover {
+  background-color: #f0f0f0;
+  color: #005bb5;
+}
+
+.nav_lang li:hover {
+  background-color: #f0f0f0;
+  color: #005bb5;
+}
+
+.nav_lang_parent:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 0.5rem;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/nav_lang_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_lang {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.nav_lang.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.right .lang nav a {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+@media (min-width: 992px) {
+  .nav_top_wrap a {
+    font-size: 0.75em;
+    line-height: 2.5;
+  }
+}
+@media (min-width: 992px) {
+  .nav_top_wrap a:focus:not(:focus-visible) {
+    outline: 0;
+  }
+}
+@media (min-width: 992px) {
+  .nav_top_wrap a:focus {
+    outline-offset: -2px;
+    outline: 2px dotted #ffcc02;
+  }
+}
+.nav_lang_parent {
+  color: #005bb5;
+  background-color: #ffffe9;
+  text-decoration: none;
+}
+
+.nav_lang_parent:hover, .nav_lang_parent:focus {
+  color: #005bb5;
+  background-color: #ffffe9;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .nav_top_wrap a {
+    font-size: 0.75em;
+    line-height: 2.5;
+  }
+}
+.right .lang nav a {
+  position: relative;
+  display: block;
+  padding-top: 0px;
+  padding-right: 28px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  color: #000000;
+  line-height: 2.5;
+}
+
+.header .lang a:hover {
+  text-decoration: underline;
+  color: #005bb5;
+}
+
+.nav_lang_parent:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 0.5rem;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/nav_lang_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.lang-open:after {
+  background: url(../images/nav_lang_arrow-hover.svg) no-repeat center;
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=index.css.map */
 
-
-.station .pic {
-  transition: transform 0.3s ease;
-  will-change: transform;
+@keyframes swimPath {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(5px, -2px); }
+  50%  { transform: translate(10px, 0); }
+  75%  { transform: translate(5px, 2px); }
+  100% { transform: translate(0, 0); }
 }
 
-.station:hover .pic {
-  transform: scale(1.5);
+section.ebus .busform .return::after {
+  position: absolute;
+  content: "";
+  width: 14%;
+  padding-bottom: 23%;
+  background-image: url(../images/turtle.png);
+  bottom: -9px;
+  right: -11%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+
+  animation: swimPath 4s infinite ease-in-out;
 }
+
+
+@keyframes busShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(1px, -1px) rotate(-1deg); }
+  40% { transform: translate(-1px, 1px) rotate(1deg); }
+  60% { transform: translate(1px, 1px) rotate(0deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
 
 .mainStation .icon {
   transition: transform 0.3s ease;
@@ -1989,44 +2165,45 @@ section.ebus .busform .station .row .on .num::before {
   transform: scale(1.5);
 }
 
+.station .pic {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
 
-.nav_lang_parent:after {
-    content: "";
-    position: absolute;
-    top: calc(50% - 6px);
-    right: 0.5rem;
-    width: 13px;
-    height: 13px;
-    background: url(../../images/nav_lang_arrow.svg) no-repeat center center;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+.station .pic:hover {
+  transform: scale(1.5);
 }
 
 
-/* 預設: 桌機顯示下拉選單 */
-.desktop-lang {
-    display: block;
+
+/* 新增語言切換按鈕樣式 */
+.lang-switch {
+  display: none;
+  gap: 8px;
+  margin-bottom: 10px;
+  justify-content: flex-end;
 }
-.mobile-lang {
-    display: none;
+.lang-switch button {
+  background: #005bb5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: background 0.2s;
+}
+.lang-switch button:hover {
+  background: #c85027;
 }
 
-/* 手機版: 下拉選單隱藏, 用按鈕顯示 */
+/* 手機版顯示語言切換 */
 @media (max-width: 980px) {
-    .desktop-lang {
-        display: none;
-    }
-    .mobile-lang {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 1em;
-    }
-    .mobile-lang button {
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        background: #fff;
-        cursor: pointer;
-    }
+  .lang-switch {
+    display: flex;
+  }
 }
+
+
+

@@ -183,7 +183,7 @@ img {
   height: 44px;
   transition: 0.25s linear;
   z-index: 100;
-  background-image: url(../images/icon-gotop.svg);
+  background-image: url(../images/gotop.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -435,6 +435,7 @@ img {
     display: block;
     padding: unset;
     display: flex;
+    flex-direction: column;
   }
   header.click .row .right .nav ul {
     flex-direction: column;
@@ -522,5 +523,11 @@ img {
   }
   .footer {
     padding: 20px 0 20px 0;
+  }
+  .header .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=layout.css.map */

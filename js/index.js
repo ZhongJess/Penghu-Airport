@@ -166,3 +166,43 @@ function setLanguage(lang) {
     console.log("Language button clicked:", lang);
     // 同樣執行切換
 }
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const parent = document.querySelector('.nav_lang_parent');
+  const menu = document.querySelector('.tc_nav_lang');
+
+  parent.setAttribute('aria-expanded', 'false');
+
+  function toggleMenu() {
+    const isOpen = parent.getAttribute('aria-expanded') === 'true';
+    parent.setAttribute('aria-expanded', String(!isOpen));
+    menu.classList.toggle('open', !isOpen);
+  }
+
+  parent.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMenu();
+  });
+  parent.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  menu.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('click', () => {
+    parent.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') toggleMenu(false);
+  });
+});
+
