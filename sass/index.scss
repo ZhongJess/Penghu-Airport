@@ -395,13 +395,41 @@ section.ebus .busform .station .row {
 
 }
 
+section.ebus .busform .station .row1 .bus {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
 
-
-
-
-
-section.ebus .busform .station .row .bus {
+section.ebus .busform .station .row2 .bus {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+section.ebus .busform .return .row1 .bus {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+
+
+
+section.ebus .busform .return .row2 .bus {
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -431,65 +459,6 @@ section.ebus .busform .station .row .bus .stopStart .stop {
     height: 54px;
     align-content:center;
 }
-
-
-// section.ebus .busform .station .row .bus .stopStart .stop p{
-//     font-size: 18px;
-//     font-weight: bold;
-//     text-align: center;
-//     color: #464546;  
-// }
-
-// section.ebus .busform .station .row .bus .stopStart .state p{
-//     font-size: 18px;
-//     font-weight: bold;
-//     text-align: center;
-//     color: #464546;  
-// }
-
-// section.ebus .busform .station .row .bus .stopStart .num ::after {
-//     position: absolute;
-//     content: "";
-//     width: 70px;
-//     height: 3px;
-//     background-color: #6ab146;
-//     top: 46%;
-//     left: 100%;
-// }
-
-// section.ebus .busform .station .row .bus .stopStart .num ::before {
-//     position: absolute;
-//     content: "";
-//     width: 150%;
-//     height: 60%;
-//     padding-top: 23%;
-//     background-image: url(../images/pic-bus-colorfu.svg);
-//     top: -70px;
-//     right: -29%;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     z-index: 2;
-// }
-
-
-
-// section.ebus .busform .station .row .bus .stopStart .num {
-//     width: 70px;
-//     height: 70px;
-//     border-radius: 50%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border: 3px solid #ffffff;
-//     position: relative;
-//     background-color: #d25225;
-// }
-
-// section.ebus .busform .station .row .bus .stopStart .num p{
-//     color: white;
-// }
-
-
 
 
 
@@ -528,27 +497,6 @@ section.ebus .busform .station .row .bus .stopCenter .stop p{
 //     color: #464546;  
 // }
 
-section.ebus .busform .station .row .bus .stopCenter .num ::after {
-    position: absolute;
-    content: "";
-    width: 122px;
-    height: 3px;
-    background-color: #6ab146;
-    top: 46%;
-    left: 100%;
-}
-
-
-section.ebus .busform .station .row .bus .stopCenter .num ::after {
-    position: absolute;
-    content: "";
-    width: 122px;
-    height: 3px;
-    background-color: #6ab146;
-    top: 46%;
-    left: 100%;
-}
-
 
 // section.ebus .busform .station .row1 .bus .num-right ::after {
 //     position: absolute;
@@ -561,45 +509,46 @@ section.ebus .busform .station .row .bus .stopCenter .num ::after {
 // }
 
 
+
+
 section.ebus .busform .station .row1 .bus::after {
-    position: absolute;
-    content: "";
-    width: 124px;
-    height: 3px;
-    background-color: #6ab146;
-    top: 20%;
-    left: 67%;
-}
-
-section.ebus .busform .return .row1 .bus::after {
-    position: absolute;
-    content: "";
-    width: 168px;
-    height: 3px;
-    background-color: #6ab146;
-    top: 21%;
-    left: 65%;
-}
-
-
-section.ebus .busform .station .row2 .bus::after {
-    position: absolute;
-    content: "";
-    width: 168px;
-    height: 3px;
-    background-color: #6ab146;
-    top: 20%;
-    left: 64%;
-}
-
-section.ebus .busform .return .row2 .bus::after {
     position: absolute;
     content: "";
     width: 121px;
     height: 3px;
     background-color: #6ab146;
     top: 20%;
-    left: 68%;
+    left: 69%;
+}
+
+section.ebus .busform .station .row2 .bus::after {
+    position: absolute;
+    content: "";
+    width: 175px;
+    height: 3px;
+    background-color: #6ab146;
+    top: 20%;
+    left: 64%;
+}
+
+section.ebus .busform .return .row1 .bus::after {
+    position: absolute;
+    content: "";
+    width: 174px;
+    height: 3px;
+    background-color: #6ab146;
+    top: 20%;
+    left: 63%;
+}
+
+section.ebus .busform .return .row2 .bus::after {
+    position: absolute;
+    content: "";
+    width: 128px;
+    height: 3px;
+    background-color: #6ab146;
+    top: 20%;
+    left: 67%;
 }
 
 // section.ebus .busform .station .row2 .blue .num ::after {
@@ -993,7 +942,7 @@ section.route .route_map .row2::after {
 
 section.route .route_map .station {
     margin-top: 30px;
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1109,20 +1058,10 @@ section.transport .content {
 section.transport .content .row {
     display: flex;
     gap: 2%;
+    justify-content: space-evenly;
 }
 
-section.transport .content .row .box {
-    position: relative;
-    width: 49%;
-    background-color: #fff;
-    padding-left: 2.5vw;
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    border-radius: 0 30px 0 30px;
-    padding-top: 58px;
-    padding-bottom: 25px;
-}
+
 
 section.transport .content .row .box .title {
     position: absolute;
@@ -1182,6 +1121,20 @@ section.transport .content .row .box .inner .point {
     font-weight: bold;
 }
 
+section.transport .content .row .box {
+    position: relative;
+    width: 47%;
+    background-color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 0 30px;
+    padding-top: 58px;
+    padding-bottom: 25px;
+}
+
 section.transport .content .row .box .inner .point::after {
     content: "";
     position: absolute;
@@ -1202,8 +1155,8 @@ section.transport .content .box {
     position: relative;
     width: 100%;
     background-color: #fff;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-top: 70px;
     padding-bottom: 50px;
     min-height: 230px;
@@ -1847,7 +1800,7 @@ section.spot .odd .num {
     }
     section.transport .content .row .box {
         border-radius: 0 20px 0 20px;
-        width: 100%;
+        width: 97%;
     }
     section.transport .content .row .box .title .pic {
         max-width: 20px;
@@ -2147,7 +2100,7 @@ section.ebus .busform .station .row .on .num::before {
 
 
 
-@media (min-width: 992px) {
+@media (min-width: 980px) {
     .nav_top_wrap a {
         font-size: .75em;
         line-height: 2.5;
@@ -2247,20 +2200,20 @@ section.ebus .busform .station .row .on .num::before {
     color: #3c3c3c;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 980px) {
     .nav_top_wrap a {
         font-size: .75em;
         line-height: 2.5;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 980px) {
     .nav_top_wrap a:focus:not(:focus-visible) {
         outline: 0;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 980px) {
     .nav_top_wrap a:focus {
         outline-offset: -2px;
         outline: 2px dotted #ffcc02;
@@ -2282,7 +2235,7 @@ section.ebus .busform .station .row .on .num::before {
 
 
 
-@media (min-width: 992px) {
+@media (min-width: 980px) {
     .nav_top_wrap a {
         font-size: .75em;
         line-height: 2.5;
@@ -2331,3 +2284,75 @@ section.ebus .busform .station .row .on .num::before {
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
+
+
+/* 預設隱藏 */
+.lang-switch {
+  display: none;
+}
+
+/* 手機版顯示：藍底白字、垂直排列 */
+@media (max-width: 980px) {
+  .lang-switch {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+.lang-switch button {
+    background: #005bb5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: background 0.2s;
+}
+.lang-switch button:hover {
+    background: #c85027;
+}
+}
+
+
+section.transport .content .row .col-4 {
+    position: relative;
+    width: 22%;
+    background-color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 0 30px;
+    padding-top: 58px;
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width: 980px) {
+    section.transport .content .row {
+        flex-direction: row;
+    }
+
+    section.transport .content .row .col-4 {
+    position: relative;
+    width: 47%;
+    background-color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 0 30px;
+    padding-top: 58px;
+    padding-bottom: 25px;
+}
+}
+
+.orange {
+    color: #dd5322;
+}
+
+

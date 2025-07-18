@@ -247,7 +247,7 @@ img {
 
 .header .nav ul {
   display: flex;
-  gap: 5.6%;
+  gap: 3%;
   justify-content: flex-end;
   width: 100%;
 }
@@ -384,11 +384,6 @@ img {
   .header {
     height: 50px;
   }
-  .header .row {
-    padding: unset;
-    height: 100%;
-    justify-content: center;
-  }
   .header .row .logo {
     max-width: 5vw;
     min-width: 50px;
@@ -412,12 +407,6 @@ img {
     height: 100%;
     overflow-y: scroll;
     padding-bottom: 30px;
-  }
-  header.click .row {
-    flex-direction: column;
-    justify-content: normal;
-    align-items: center;
-    padding: unset;
   }
   header.click .row .logo {
     height: 50px;
@@ -529,5 +518,30 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 980px) {
+  header.click .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: unset;
+  }
+}
+.header .row {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-left: 22.5px;
+  padding-right: 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 980px) {
+  .header .row {
+    padding: unset;
+    justify-content: center;
   }
 }/*# sourceMappingURL=layout.css.map */
