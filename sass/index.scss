@@ -2435,23 +2435,23 @@ a:focus, button:focus, input:focus, textarea:focus, [tabindex]:focus {
 }
 
 /* === 各站點卡片及景點圖片專屬 class === */
-.pic.spot1      { background-image: url('/images/spot1.png'); }
-.pic.spot2      { background-image: url('/images/spot2.png'); }
-.pic.spot3      { background-image: url('/images/spot3.png'); }
-.pic.spot5      { background-image: url('/images/spot5.png'); }
-.pic.spot6      { background-image: url('/images/spot6.png'); }
-.pic.spot7      { background-image: url('/images/spot7.png'); }
-.pic.spot8      { background-image: url('/images/spot8.png'); }
-.pic.spot9      { background-image: url('/images/spot9.jpg'); }
-.pic.spot10     { background-image: url('/images/spot10.png'); }
-.pic.spot12     { background-image: url('/images/spot12.png'); }
-.pic.spot13     { background-image: url('/images/spot13.jpg'); }
-.pic.spot14     { background-image: url('/images/spot14.jpg'); }
-.pic.spot15     { background-image: url('/images/spot15.jpg'); }
-.pic.spot16     { background-image: url('/images/spot16.jpg'); }
-.pic.scenic_4_2 { background-image: url('/images/scenic_4_2.jpg'); }
-.pic.scenic_4_3 { background-image: url('/images/scenic_4_3.jpg'); }
-.pic.scenic_6_1 { background-image: url('/images/scenic_6_1.jpg'); }
+.pic.spot1      { background-image: url('./images/spot1.png'); }
+.pic.spot2      { background-image: url('./images/spot2.png'); }
+.pic.spot3      { background-image: url('./images/spot3.png'); }
+.pic.spot5      { background-image: url('./images/spot5.png'); }
+.pic.spot6      { background-image: url('./images/spot6.png'); }
+.pic.spot7      { background-image: url('./images/spot7.png'); }
+.pic.spot8      { background-image: url('./images/spot8.png'); }
+.pic.spot9      { background-image: url('./images/spot9.jpg'); }
+.pic.spot10     { background-image: url('./images/spot10.png'); }
+.pic.spot12     { background-image: url('./images/spot12.png'); }
+.pic.spot13     { background-image: url('./images/spot13.jpg'); }
+.pic.spot14     { background-image: url('./images/spot14.jpg'); }
+.pic.spot15     { background-image: url('./images/spot15.jpg'); }
+.pic.spot16     { background-image: url('./images/spot16.jpg'); }
+.pic.scenic_4_2 { background-image: url('./images/scenic_4_2.jpg'); }
+.pic.scenic_4_3 { background-image: url('./images/scenic_4_3.jpg'); }
+.pic.scenic_6_1 { background-image: url('./images/scenic_6_1.jpg'); }
 /* 有新景點只要新增同格式 class 與背景圖即可 */
 
 
