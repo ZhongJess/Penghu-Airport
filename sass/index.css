@@ -1858,16 +1858,6 @@ section.spot .odd .num {
     width: 100%;
   }
 }
-@media screen and (max-width: 380px) {
-  p.innerp.orange.mb-2 {
-    height: 105px;
-    padding-bottom: 15px;
-    border-bottom: #d95220 2px dashed;
-  }
-  .ticket {
-    height: 96px;
-  }
-}
 .lightbox .close_btn {
   position: absolute;
   top: 10px;
@@ -2045,7 +2035,6 @@ section.ebus .busform .station .row .on .num::before {
   background-image: url(../images/nav_lang_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -2137,15 +2126,12 @@ section.ebus .busform .station .row .on .num::before {
   background-image: url(../images/nav_lang_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .lang-open:after {
   background: url(../images/nav_lang_arrow-hover.svg) no-repeat center;
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 

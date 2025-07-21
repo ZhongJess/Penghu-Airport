@@ -75,6 +75,8 @@ $yellow:  #ffc107 !default;
 $green:   #00B459 !default;
 $teal:    #20c997 !default;
 $cyan:    #006a7b !default;
+$bus-realtime: #6ab146;
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -91,7 +93,12 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-500,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "bus-realtime": $bus-realtime,
+  
+
+
+
 ) !default;
 // scss-docs-end colors-map
 
@@ -137,6 +144,9 @@ $theme-colors: (
   // "brand_d1":   $brand_d1,
   "Facebook":   #405DA9,
   "GooglePlus": #DD4B39,
+  "bus-realtime": #46762e,
+
+
 ) !default;
 // scss-docs-end theme-colors-map
 

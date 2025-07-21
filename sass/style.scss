@@ -1,9 +1,8 @@
 // style.scss
-@import 'variables';
+@import '/sass/_Bootstrap/variables';
 @import 'mixins';
 @import 'header';
 @import 'animate';
-@import 'index';
 @import 'layout';
 
 
@@ -13,4 +12,6 @@
     justify-content: flex-end;
     width: 100%;
 }
+
+
 

@@ -335,7 +335,7 @@ section.ebus .busform .box {
 }
 
 section.ebus .busform .instruct {
-    background-color: #6ab146;
+    background-color: #6d865f;
     width: 200px;
     margin: auto 0 auto;
     padding: 10px;
@@ -386,7 +386,7 @@ section.ebus .busform .return::after {
 section.ebus .busform .station {
     padding: 30px;
     padding-top: 100px;
-    border-top: 5px solid #6ab146;
+    border-top: 5px solid #6d865f;
     background: #fff;
 }
 
@@ -503,7 +503,7 @@ section.ebus .busform .station .row .bus .stopCenter .stop p{
 //     content: "";
 //     width: 42px;
 //     height: 3px;
-//     background-color: #6ab146;
+//     background-color: #6d865f;
 //     top: 46%;
 //     left: 100%;
 // }
@@ -516,7 +516,7 @@ section.ebus .busform .station .row1 .bus::after {
     content: "";
     width: 121px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 20%;
     left: 69%;
 }
@@ -526,7 +526,7 @@ section.ebus .busform .station .row2 .bus::after {
     content: "";
     width: 175px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 20%;
     left: 64%;
 }
@@ -536,7 +536,7 @@ section.ebus .busform .return .row1 .bus::after {
     content: "";
     width: 174px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 20%;
     left: 63%;
 }
@@ -546,7 +546,7 @@ section.ebus .busform .return .row2 .bus::after {
     content: "";
     width: 128px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 20%;
     left: 67%;
 }
@@ -556,7 +556,7 @@ section.ebus .busform .return .row2 .bus::after {
 //     content: "";
 //     width: 103px;
 //     height: 3px;
-//     background-color: #6ab146;
+//     background-color: #6d865f;
 //     top: 46%;
 //     right: 100%;
 // }
@@ -566,7 +566,7 @@ section.ebus .busform .station .row1 .bus .num-right ::after {
     content: "";
     width: 40px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 49%;
     left: 100%;
 }
@@ -576,7 +576,7 @@ section.ebus .busform .station .row2 .bus .num-left ::after {
     content: "";
     width: 30px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 46%;
     right: 100%;
 }
@@ -589,7 +589,7 @@ section.ebus .busform .station .row2 .bus .num-left ::after {
     content: "";
     width: 40px;
     height: 3px;
-    background-color: #6ab146;
+    background-color: #6d865f;
     top: 46%;
     right: 100%;
 }
@@ -600,7 +600,7 @@ section.ebus .busform .station .row2 .bus .num-left ::after {
 //     content: "";
 //     width: 58.2%;
 //     height: 3px;
-//     background-color: #6ab146;
+//     background-color: #6d865f;
 //     top: 19.6%;
 //     left: 70.3%;
 // }
@@ -628,14 +628,14 @@ section.ebus .busform .station .row .bus .num {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #6ab146;
+    border: 3px solid #6d865f;
     position: relative;
 }
 
 section.ebus .busform .station .row .bus .num p {
     font-family: "Arial";
     font-size: 36px;
-    color: #6ab146;
+    color: #6d865f;
 }
 
 section.ebus .busform .station .row .bus .stop {
@@ -668,7 +668,7 @@ section.ebus .busform .station .row .bus .state {
 
 section.ebus .busform .station .row .bus .state p {
     font-family: "Microsoft JhengHei";
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     color: #7e7e7f;
@@ -700,7 +700,7 @@ section.ebus .busform .station .row .orange .state p {
 }
 
 section.ebus .busform .station .row .blue .state p {
-    color: #6ab146;
+    color: #6d865f;
 }
 
 section.ebus .busform .station .row .gray .state p {
@@ -796,7 +796,7 @@ section.ebus .busform .return.hidden .station {
 section.ebus .busform .departure.hidden .coll,
 section.ebus .busform .return.hidden .coll {
     background-color: transparent;
-    border-top: 5px solid #6ab146;
+    border-top: 5px solid #6d865f;
     position: relative;
     padding-top: 50px;
 }
@@ -955,7 +955,7 @@ section.route .route_map .station p {
     font-family: "Microsoft JhengHei";
     font-size: 24px;
     font-weight: bold;
-    color: #6ab146;
+    color: #6d865f;
     max-width: 200px;
     text-align: center;
     line-height: 1.1;
@@ -968,7 +968,7 @@ section.route .route_map .station span {
     font-family: "Microsoft JhengHei";
     font-size: 12px;
     font-weight: bold;
-    color: #6ab146;
+    color: #6d865f;
     text-align: center;
     transition: 0.25s linear;
 }
@@ -976,7 +976,7 @@ section.route .route_map .station span {
 section.route .route_map .station .pic {
     width: 40px;
     height: 40px;
-    border: 2px solid #6ab146;
+    border: 2px solid #6d865f;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -986,11 +986,8 @@ section.route .route_map .station .pic {
 }
 
 section.route .route_map .station .pic img {
-    max-width: 20px;
+    max-width: 24px;
 }
-
-
-
 
 
 section.route .route_map .map {
@@ -1070,7 +1067,7 @@ section.transport .content .row .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: #dd5322;
+    background-color: #d95220;
     padding: 5px 15px;
 }
 
@@ -1099,6 +1096,7 @@ section.transport .content .row .box .inner .main {
     font-weight: bold;
     color: #000;
     letter-spacing: 1.5px;
+    
 }
 
 section.transport .content .row .box .inner .main span {
@@ -1138,7 +1136,7 @@ section.transport .content .row .box {
 section.transport .content .row .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: #dd5322;
+    background-color: #d95220;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1172,7 +1170,7 @@ section.transport .content .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: #dd5322;
+    background-color: #d95220;
     border-radius: 0 0 10px 0;
     padding: 5px 15px;
 }
@@ -1242,7 +1240,7 @@ section.transport .content .box .inner .links p {
 section.transport .content .box .inner .links p::after {
     content: "";
     position: absolute;
-    background-color: #dd5322;
+    background-color: #d95220;
     width: 100%;
     height: 2px;
     bottom: -2px;
@@ -1263,7 +1261,7 @@ section.transport .content .box .inner .links:hover p::after {
 section.transport .content .box .inner .links::after {
     content: "";
     position: absolute;
-    background-color: #dd5322;
+    background-color: #d95220;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1290,7 +1288,7 @@ section.transport .content .box .inner .point p {
 section.transport .content .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: #dd5322;
+    background-color: #d95220;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1745,7 +1743,7 @@ section.spot .odd .num {
         top: 103%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #6ab146;
+        background-color: #6d865f;
     }
     section.route .route_map .row2 {
         flex-direction: column;
@@ -1834,7 +1832,7 @@ section.spot .odd .num {
     }
     section.transport .content .box .inner .links p {
         text-decoration: underline;
-        text-decoration-color: #dd5322;
+        text-decoration-color: #d95220;
         text-underline-offset: 5px;
     }
 }
@@ -1958,6 +1956,23 @@ section.spot .odd .num {
     }
 }
 
+
+
+@media screen and (max-width: 380px) {
+   p.innerp.orange.mb-2 {
+    height: 105px;
+    padding-bottom: 15px;
+    border-bottom: #d95220 2px dashed;
+}
+
+.ticket {
+    height: 96px;
+}
+
+    }
+
+
+
 .lightbox .close_btn {
     position: absolute;
     top: 10px;
@@ -2017,7 +2032,7 @@ section.route .route_map .mainStation p {
     font-family: "Microsoft JhengHei";
     font-size: 24px;
     font-weight: bold;
-    color: #dd5322;
+    color: #d95220;
     max-width: 200px;
     text-align: center;
     line-height: 1.1;
@@ -2031,7 +2046,7 @@ section.route .route_map .mainStation span {
     font-family: "Microsoft JhengHei";
     font-size: 12px;
     font-weight: bold;
-    color: #dd5322;
+    color: #d95220;
     text-align: center;
     transition: 0.25s linear;
 
@@ -2039,7 +2054,7 @@ section.route .route_map .mainStation span {
 
 
 .mainStation .icon {
-    background-color: #dd5322;
+    background-color: #d95220;
     color: #ffffff;
     border: 2px solid #e29837;
     width: 40px;
@@ -2352,7 +2367,132 @@ section.transport .content .row .col-4 {
 }
 
 .orange {
-    color: #dd5322;
+    color: #d95220;
+    font-size: 20px;
 }
 
 
+p.innerp.orange.mb-2 {
+    min-height: 87px;
+    padding-bottom: 15px;
+    border-bottom: #d95220 2px dashed;
+
+}
+
+
+.ticket {
+
+  min-height: 48px;        
+}
+
+a:focus, button:focus, input:focus, [tabindex]:focus {
+  outline: 2px solid #1976d2;      /* 自訂顏色 */
+  outline-offset: 2px;
+  /* 可加入框線、底色等視覺提示 */
+  background-color: #e3f2fd;       /* 焦點時的背景 */
+}
+
+.skip-main {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #fff;
+  color: #1976d2;
+  z-index: 1000;
+}
+.skip-main:focus {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 0.5em 1em;
+  border: 2px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  text-decoration: underline;
+  font-size: 1.2em;
+  outline: 0;
+}
+
+a:focus, button:focus, input:focus, textarea:focus, [tabindex]:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+  background: #e3f2fd;
+  /* 其他強調視覺即可 */
+}
+
+
+/* === 卡片共用樣式（確保所有卡片背景圖統一對齊顯示） === */
+.pic[class^="spot"],
+.pic[class^="scenic_"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === 各站點卡片及景點圖片專屬 class === */
+.pic.spot1      { background-image: url('/images/spot1.png'); }
+.pic.spot2      { background-image: url('/images/spot2.png'); }
+.pic.spot3      { background-image: url('/images/spot3.png'); }
+.pic.spot5      { background-image: url('/images/spot5.png'); }
+.pic.spot6      { background-image: url('/images/spot6.png'); }
+.pic.spot7      { background-image: url('/images/spot7.png'); }
+.pic.spot8      { background-image: url('/images/spot8.png'); }
+.pic.spot9      { background-image: url('/images/spot9.jpg'); }
+.pic.spot10     { background-image: url('/images/spot10.png'); }
+.pic.spot12     { background-image: url('/images/spot12.png'); }
+.pic.spot13     { background-image: url('/images/spot13.jpg'); }
+.pic.spot14     { background-image: url('/images/spot14.jpg'); }
+.pic.spot15     { background-image: url('/images/spot15.jpg'); }
+.pic.spot16     { background-image: url('/images/spot16.jpg'); }
+.pic.scenic_4_2 { background-image: url('/images/scenic_4_2.jpg'); }
+.pic.scenic_4_3 { background-image: url('/images/scenic_4_3.jpg'); }
+.pic.scenic_6_1 { background-image: url('/images/scenic_6_1.jpg'); }
+/* 有新景點只要新增同格式 class 與背景圖即可 */
+
+
+
+.scroll.scroll-arrow {
+  background-image: url('/images/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  /* 不設 cursor / :hover 樣式 */
+}
+
+button.btn.w-100.purchase-btn.mb-3 {
+  background-color: #d95220;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  outline: none;          /* 預設移除 outline，之後 focus 狀態會自訂 */
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* 滑鼠 hover 效果 */
+button.btn.w-100.purchase-btn.mb-3:hover,
+button.btn.w-100.purchase-btn.mb-3:focus-visible {
+  background-color: #b84318;    /* 深一點的橘色 */
+  color: #FFF;
+  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #d95220;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 鍵盤 focus (無障礙重點) */
+button.btn.w-100.purchase-btn.mb-3:focus-visible {
+  /* 可增加明顯的邊框或光暈 */
+  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #7c370f;
+  outline: none;
+}
+
+
+.bus-icon {
+  filter: hue-rotate(120deg);
+}

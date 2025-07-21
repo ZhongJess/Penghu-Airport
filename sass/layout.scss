@@ -183,12 +183,11 @@ img {
     bottom: 55px;
     width: 50px;
     height: 44px;
-    -webkit-transition: 0.25s linear;
-    transition: 0.25s linear;
     z-index: 100;
-    background-image: url(../images/gotop.svg);
+    background-image: url(/images/icon-gotop.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    transition: 0.25s linear;
 }
 
 @media (min-width: 981px) {
@@ -614,7 +613,8 @@ img {
 
 @media screen and (max-width: 980px) {
     .header .row {
-        padding: unset;
+        display: flex;
         justify-content: center;
+        
     }
 }
