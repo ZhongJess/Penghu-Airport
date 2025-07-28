@@ -1067,7 +1067,7 @@ section.transport .content .row .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: #d95220;
+    background-color: #db3b06;
     padding: 5px 15px;
 }
 
@@ -1136,7 +1136,7 @@ section.transport .content .row .box {
 section.transport .content .row .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: #d95220;
+    background-color: #db3b06;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1170,7 +1170,7 @@ section.transport .content .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: #d95220;
+    background-color: #db3b06;
     border-radius: 0 0 10px 0;
     padding: 5px 15px;
 }
@@ -1240,7 +1240,7 @@ section.transport .content .box .inner .links p {
 section.transport .content .box .inner .links p::after {
     content: "";
     position: absolute;
-    background-color: #d95220;
+    background-color: #db3b06;
     width: 100%;
     height: 2px;
     bottom: -2px;
@@ -1261,7 +1261,7 @@ section.transport .content .box .inner .links:hover p::after {
 section.transport .content .box .inner .links::after {
     content: "";
     position: absolute;
-    background-color: #d95220;
+    background-color: #db3b06;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1288,7 +1288,7 @@ section.transport .content .box .inner .point p {
 section.transport .content .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: #d95220;
+    background-color: #db3b06;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1667,7 +1667,7 @@ section.spot .odd .num {
         transform: translateX(-50%);
         left: 50%;
         width: 3px;
-        height: 39%;
+        height: 40px;
     }
 
     section.ebus .busform .station .row1 .bus .num-right ::after {
@@ -1831,7 +1831,7 @@ section.spot .odd .num {
     }
     section.transport .content .box .inner .links p {
         text-decoration: underline;
-        text-decoration-color: #d95220;
+        text-decoration-color: #db3b06;
         text-underline-offset: 5px;
     }
 }
@@ -1961,7 +1961,7 @@ section.spot .odd .num {
    p.innerp.orange.mb-2 {
     height: 105px;
     padding-bottom: 15px;
-    border-bottom: #d95220 2px dashed;
+    border-bottom: #db3b06 2px dashed;
 }
 
 .ticket {
@@ -2031,7 +2031,7 @@ section.route .route_map .mainStation p {
     font-family: "Microsoft JhengHei";
     font-size: 24px;
     font-weight: bold;
-    color: #d95220;
+    color: #db3b06;
     max-width: 200px;
     text-align: center;
     line-height: 1.1;
@@ -2045,7 +2045,7 @@ section.route .route_map .mainStation span {
     font-family: "Microsoft JhengHei";
     font-size: 12px;
     font-weight: bold;
-    color: #d95220;
+    color: #db3b06;
     text-align: center;
     transition: 0.25s linear;
 
@@ -2053,7 +2053,7 @@ section.route .route_map .mainStation span {
 
 
 .mainStation .icon {
-    background-color: #d95220;
+    background-color: #db3b06;
     color: #ffffff;
     border: 2px solid #e29837;
     width: 40px;
@@ -2345,6 +2345,23 @@ section.transport .content .row .col-4 {
     padding-bottom: 25px;
 }
 
+.orange {
+    color: #db3b06;
+    font-size: 20px;
+}
+
+
+p.innerp.orange.mb-2 {
+    min-height: 87px;
+    padding-bottom: 15px;
+    border-bottom: #db3b06 2px dashed;
+
+}
+
+
+
+
+
 @media screen and (max-width: 980px) {
     section.transport .content .row {
         flex-direction: row;
@@ -2363,18 +2380,42 @@ section.transport .content .row .col-4 {
     padding-top: 58px;
     padding-bottom: 25px;
 }
-}
-
-.orange {
-    color: #d95220;
-    font-size: 20px;
-}
-
 
 p.innerp.orange.mb-2 {
-    min-height: 87px;
+    min-height: 0px;
     padding-bottom: 15px;
-    border-bottom: #d95220 2px dashed;
+    border-bottom: #db3b06 2px dashed;
+
+}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    section.transport .content .row {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    section.transport .content .row .col-4 {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 0 30px;
+    padding-top: 58px;
+    padding-bottom: 25px;
+}
 
 }
 
@@ -2384,12 +2425,25 @@ p.innerp.orange.mb-2 {
   min-height: 48px;        
 }
 
-a:focus, button:focus, input:focus, [tabindex]:focus {
-  outline: 2px solid #1976d2;      /* 自訂顏色 */
-  outline-offset: 2px;
-  /* 可加入框線、底色等視覺提示 */
-  background-color: #e3f2fd;       /* 焦點時的背景 */
+    a:focus, button:focus, input:focus, [tabindex]:focus {
+      outline: 2px solid #1976d2;      /* 自訂顏色 */
+      outline-offset: 2px;
+      background-color: #e3f2fd;       /* 焦點時的背景 */
+    }
+.header .logo .pc:focus {
+    display: block;
+    outline: 2px solid #1976d2;
+    outline-offset: 2px;
+    background-color: #e3f2fd;
 }
+
+.header .logo .mobile:focus {
+    display: block;
+    outline: 2px solid #1976d2;
+    outline-offset: 2px;
+    background-color: #e3f2fd;
+}
+
 
 .skip-main {
   position: absolute;
@@ -2417,11 +2471,14 @@ a:focus, button:focus, input:focus, [tabindex]:focus {
   outline: 0;
 }
 
-a:focus, button:focus, input:focus, textarea:focus, [tabindex]:focus {
-  outline: 2px solid #1976d2;
-  outline-offset: 2px;
-  background: #e3f2fd;
-  /* 其他強調視覺即可 */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+[tabindex]:focus {
+outline-offset: 2px;
+    outline: 2px dotted #7c65b8;
 }
 
 
@@ -2430,36 +2487,6 @@ section.spot .content .cards .card .pic img{
     height: 151.88px;
 
 }
-
-
-/* === 卡片共用樣式（確保所有卡片背景圖統一對齊顯示） === */
-// .pic img [class^="spot"],
-// .pic img [class^="scenic_"] {
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
-// /* === 各站點卡片及景點圖片專屬 class === */
-// .pic.spot1      { background-image: url('images/spot1.png'); }
-// .pic.spot2      { background-image: url('./images/spot2.png'); }
-// .pic.spot3      { background-image: url('./images/spot3.png'); }
-// .pic.spot5      { background-image: url('./images/spot5.png'); }
-// .pic.spot6      { background-image: url('./images/spot6.png'); }
-// .pic.spot7      { background-image: url('./images/spot7.png'); }
-// .pic.spot8      { background-image: url('./images/spot8.png'); }
-// .pic.spot9      { background-image: url('./images/spot9.jpg'); }
-// .pic.spot10     { background-image: url('./images/spot10.png'); }
-// .pic.spot12     { background-image: url('./images/spot12.png'); }
-// .pic.spot13     { background-image: url('./images/spot13.jpg'); }
-// .pic.spot14     { background-image: url('./images/spot14.jpg'); }
-// .pic.spot15     { background-image: url('./images/spot15.jpg'); }
-// .pic.spot16     { background-image: url('./images/spot16.jpg'); }
-// .pic.scenic_4_2 { background-image: url('./images/scenic_4_2.jpg'); }
-// .pic.scenic_4_3 { background-image: url('./images/scenic_4_3.jpg'); }
-// .pic.scenic_6_1 { background-image: url('./images/scenic_6_1.jpg'); }
-// /* 有新景點只要新增同格式 class 與背景圖即可 */
-
 
 
 .scroll.scroll-arrow {
@@ -2473,7 +2500,7 @@ section.spot .content .cards .card .pic img{
 }
 
 button.btn.w-100.purchase-btn.mb-3 {
-  background-color: #d95220;
+  background-color: #db3b06;
   color: #FFF;
   font-size: 20px;
   font-weight: 400;
@@ -2486,7 +2513,7 @@ button.btn.w-100.purchase-btn.mb-3:hover,
 button.btn.w-100.purchase-btn.mb-3:focus-visible {
   background-color: #b84318;    /* 深一點的橘色 */
   color: #FFF;
-  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #d95220;
+  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #db3b06;
   outline: none;
   cursor: pointer;
 }
@@ -2501,4 +2528,72 @@ button.btn.w-100.purchase-btn.mb-3:focus-visible {
 
 .bus-icon {
   filter: hue-rotate(120deg);
+}
+
+
+
+
+a:focus img, a:focus-visible img {
+  outline: 3px solid #1976d2;   /* 明顯藍色外框 */
+  outline-offset: 2px;          /* 與圖片間隔 */
+  border-radius: 4px;           /* 和圖像呼應圓角 */
+  box-shadow: 0 0 0 4px #90caf9; /* 額外柔光，高對比 */
+  transition: outline .15s, box-shadow .15s;
+}
+
+a:focus, a:focus-visible  {
+  outline: 3px solid #1976d2;   /* 明顯藍色外框 */
+  outline-offset: 2px;          /* 與圖片間隔 */
+  border-radius: 4px;           /* 和圖像呼應圓角 */
+  box-shadow: 0 0 0 4px #90caf9; /* 額外柔光，高對比 */
+  transition: outline .15s, box-shadow .15s;
+}
+
+
+// 導盲磚
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+  background: #fff; /* 建議加底色避免底層干擾 */
+  color: #000;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: left 0.1s, top 0.1s;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  outline: 3px solid #1976d2; /* 聚焦時清楚標示 */
+}
+
+
+
+@media screen and (max-width: 980px) {
+section.ebus .busform .station .row1 .bus,
+section.ebus .busform .station .row2 .bus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+section.route .route_map .row2 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+}
 }

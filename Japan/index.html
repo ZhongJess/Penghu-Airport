@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,8 +7,8 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=0" />
     <meta name="format-detection" content="telephone=no" />
-    <title>澎湖空港快線 Penghu Airport Express Route</title>
-    <meta name="Title" content="澎湖空港快線 Penghu Airport Express Route" />
+    <title>澎湖空港快線（ペンフー空港エクスプレス路線）</title>
+    <meta name="Title" content="澎湖空港快線（ペンフー空港エクスプレス路線）">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
@@ -45,23 +45,21 @@
         <div id="skipMain">
             <a class="skip-main" href="#departure_station" title="跳到主要內容">跳到主要內容</a>
         </div>
-        <header class="header" id="header" role="banner" aria-label="網站標頭">
-            <a class="menuBtn" href="javascript:;" aria-label="主選單開關" >
+        <header class="header" id="header" role="banner" aria-label="網站標頭" tabindex="-1">
+            <a class="menuBtn" href="javascript:;" aria-label="主選單開關" tabindex="0">
                 <span></span>
-                <span></span>               
-                <span></span>   
+                <span></span>
+                <span></span>
             </a>
             <div class="row">
-                <div class="logo" aria-label="澎湖國家風景區管理處LOGO">
+                <div class="logo">
                     <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖國家風景區管理處LOGO">
                         <img class="pc" src="./images/logo.svg" alt="澎湖國家風景區管理處標誌" />
                         <img class="mobile" src="./images/logo_m.svg" alt="澎湖國家風景區管理處標誌（手機版）" />
                     </a>
                 </div>
                 <div class="right">
-<div id="tabU" class="skip-link-wrap">
-<a href="#site-header" title="跳至導覽列" accesskey="U" class="skip-link">跳至導覽列</a>
-</div>                    <div class="lang" aria-label="相關連結">
+                    <div class="lang" aria-label="相關連結">
                         <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖國家風景管理處首頁（另開視窗）">首頁</a>
                         <a href="https://www.penghu-nsa.gov.tw/Info/Sitemap.htm#" target="_blank"
                             aria-label="網站導覽（另開視窗）">網站導覽</a>
@@ -1133,7 +1131,7 @@
 
             </div>
         </section>
-        <section class="ebus" role="region" aria-label="公車動態">
+        <section class="ebus" tabindex="-1" role="region" aria-label="公車動態">
             <div class="title" id="ebus">
                 <h2>公車動態</h2>
             </div>
@@ -1152,12 +1150,9 @@
                             <p>去程</p>
                         </div>
                     </div>
-                    <div class="station" id="departure_station" aria-label="去程站點列表">
-<div id="tabC" class="skip-link-wrap">
-<a href="#main-content" title="跳至主要內容" accesskey="C" class="skip-link">跳至主要內容</a>
-</div>
+                    <div class="station" id="departure_station" role="list" aria-label="去程站點列表">
                         <div class="row row1">
-                            <div class="bus" title="馬公港站 尚未發車">
+                            <div class="bus" tabindex="0" role="listitem" aria-label="馬公港站 尚未發車">
                                 <div class="num" aria-label="站點編號 1">
                                     <p>1</p>
                                 </div>
@@ -1168,7 +1163,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus" title="公車總站 尚未發車">
+                            <div class="bus" tabindex="0" role="listitem" aria-label="公車總站 尚未發車">
                                 <div class="num" aria-label="站點編號 2">
                                     <p>2</p>
                                 </div>
@@ -1179,7 +1174,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus"  title="開拓館（澎湖縣政府） 尚未發車">
+                            <div class="bus" tabindex="0" role="listitem" aria-label="開拓館（澎湖縣政府） 尚未發車">
                                 <div class="num" aria-label="站點編號 3">
                                     <p>3</p>
                                 </div>
@@ -1190,7 +1185,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus"  title="北辰市場（勝國） 尚未發車">
+                            <div class="bus" tabindex="0" role="listitem" aria-label="北辰市場（勝國） 尚未發車">
                                 <div class="num" aria-label="站點編號 4">
                                     <p>4</p>
                                 </div>
@@ -1201,7 +1196,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus" title="南海遊客中心（澎澄、雅霖） 尚未發車">
+                            <div class="bus" tabindex="0" role="listitem" aria-label="南海遊客中心（澎澄、雅霖） 尚未發車">
                                 <div class="num num-right" aria-label="站點編號 5">
                                     <p>5</p>
                                 </div>
@@ -1218,7 +1213,7 @@
 
 
                         <div class="row row2">
-                            <div class="bus" title="國際廣場（福朋喜來登） 尚未發車">
+                            <div class="bus" role="listitem" aria-label="國際廣場（福朋喜來登） 尚未發車" tabindex="0">
                                 <div class="num num-left">
                                     <p>6</p>
                                 </div>
@@ -1229,7 +1224,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus"  title="文澳（元泰、百世多麗） 尚未發車">
+                            <div class="bus" role="listitem" aria-label="文澳（元泰、百世多麗） 尚未發車" tabindex="0">
                                 <div class="num">
                                     <p>7</p>
                                 </div>
@@ -1240,7 +1235,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus on orange"  title="澎湖遊客中心 15:00進站">
+                            <div class="bus on orange" role="listitem" aria-label="澎湖遊客中心 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>8</p>
                                 </div>
@@ -1251,7 +1246,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="澎湖機場 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="澎湖機場 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>9</p>
                                 </div>
@@ -1276,9 +1271,9 @@
                             <p>回程</p>
                         </div>
                     </div>
-                    <div class="station return" id="return_station" aria-label="回程站點列表">
+                    <div class="station return" id="return_station" role="list" aria-label="回程站點列表">
                         <div class="row row1">
-                            <div class="bus"  title="澎湖機場 尚未發車" >
+                            <div class="bus" role="listitem" aria-label="澎湖機場 尚未發車" tabindex="0">
                                 <div class="num">
                                     <p>9</p>
                                 </div>
@@ -1289,7 +1284,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus" title="澎湖遊客中心 尚未發車" >
+                            <div class="bus" role="listitem" aria-label="澎湖遊客中心 尚未發車" tabindex="0">
                                 <div class="num">
                                     <p>8</p>
                                 </div>
@@ -1300,7 +1295,7 @@
                                     <p>尚未發車</p>
                                 </div>
                             </div>
-                            <div class="bus orange on" title="文澳（元泰、百世多麗） 15:00進站">
+                            <div class="bus orange on" role="listitem" aria-label="文澳（元泰、百世多麗） 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>7</p>
                                 </div>
@@ -1311,7 +1306,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="國際廣場（福朋喜來登） 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="國際廣場（福朋喜來登） 15:00進站" tabindex="0">
                                 <div class="num num-right">
                                     <p>6</p>
                                 </div>
@@ -1328,7 +1323,7 @@
                         <div class="line"><img src="./images/line.png" alt=""></div>
 
                         <div class="row row2">
-                            <div class="bus orange" title="南海遊客中心（澎澄、雅霖） 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="南海遊客中心（澎澄、雅霖） 15:00進站" tabindex="0">
                                 <div class="num num-left">
                                     <p>5</p>
                                 </div>
@@ -1339,7 +1334,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="北辰市場（勝國） 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="北辰市場（勝國） 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>4</p>
                                 </div>
@@ -1350,7 +1345,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="開拓館（澎湖縣政府）站 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="開拓館（澎湖縣政府）站 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>3</p>
                                 </div>
@@ -1361,7 +1356,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="公車總站 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="公車總站 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>2</p>
                                 </div>
@@ -1372,7 +1367,7 @@
                                     <p>15:00進站</p>
                                 </div>
                             </div>
-                            <div class="bus orange" title="馬公港 15:00進站">
+                            <div class="bus orange" role="listitem" aria-label="馬公港 15:00進站" tabindex="0">
                                 <div class="num">
                                     <p>1</p>
                                 </div>
@@ -1392,7 +1387,7 @@
 
             </div>
         </section>
-        <section class="route" role="region" aria-label="乘車路線">
+        <section class="route" tabindex="-1" role="region" aria-label="乘車路線">
             <div class="title" id="route">
                 <div class="pic">
                     <img src="./images/title_icon1.svg?2507" alt="" />
@@ -1456,7 +1451,7 @@
         </section>
 
         <section class="transport" role="region" aria-label="乘車資訊">
-            <div class="title" id="transport">
+            <div class="title" id="transport" tabindex="-1">
                 <div class="pic"><img src="./images/title_icon2.svg" alt="" /></div>
                 <h2>乘車資訊</h2>
             </div>
@@ -1514,7 +1509,7 @@
                 </div>
 
                 <!-- 4張套票 -->
-                <div class="row" id="ticket-info">
+                <div class="row" id="ticket-info" tabindex="-1">
                     <div class="box col-4">
                         <div class="title">
                             <div class="pic"><img src="./images/icon-fare.svg" /></div>
@@ -1638,7 +1633,7 @@
 
 
 
-                <div class="box transportation" id="transportation">
+                <div class="box transportation" id="transportation" tabindex="-1">
                     <div class="title">
                         <div class="pic"><img src="./images/icon-transportation.svg" /></div>
                         <p>轉乘資訊</p>
@@ -1677,7 +1672,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box" id="promotions" >
+                <div class="box" id="promotions" tabindex="-1">
                     <div class="title">
                         <div class="pic"><img src="./images/icon-promotions.svg" /></div>
                         <p>優惠資訊</p>
@@ -1696,12 +1691,12 @@
             </div>
         </section>
         <section class="spot">
-            <div class="title" id="spot">
+            <div class="title" id="spot" tabindex="-1">
                 <div class="pic"><img src="./images/title_icon3.svg" /></div>
                 <h2>站點周邊景點</h2>
             </div>
             <div class="container">
-                <div class="content " id="spot1"  aria-label="馬公港站點資訊">
+                <div class="content " id="spot1" tabindex="-1" aria-label="馬公港站點資訊">
                     <div class="num">
                         <p>1</p>
                     </div>
@@ -1789,7 +1784,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" id="spot2" aria-label="公車總站站點資訊">
+                <div class="content even" tabindex="-1" id="spot2" aria-label="公車總站站點資訊">
                     <div class="num">
                         <p>2</p>
                     </div>
@@ -1859,7 +1854,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" id="spot3" aria-label="開拓館(澎湖縣政府)站點資訊">
+                <div class="content even" tabindex="-1" id="spot3" aria-label="開拓館(澎湖縣政府)站點資訊">
                     <div class="num">
                         <p>3</p>
                     </div>
@@ -1892,7 +1887,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" id="spot4" aria-label="北辰市場(勝國)站點資訊">
+                <div class="content even" tabindex="-1" id="spot4" aria-label="北辰市場(勝國)站點資訊">
                     <div class="num">
                         <p>4</p>
                     </div>
@@ -1925,7 +1920,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" id="spot5" aria-label="南海遊客中心(澎澄、雅霖)站點資訊">
+                <div class="content odd" tabindex="-1" id="spot5" aria-label="南海遊客中心(澎澄、雅霖)站點資訊">
                     <div class="num">
                         <p>5</p>
                     </div>
@@ -1976,7 +1971,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" id="spot6" aria-label="國際廣場(福朋喜來登)站點資訊">
+                <div class="content even" tabindex="-1" id="spot6" aria-label="國際廣場(福朋喜來登)站點資訊">
                     <div class="num">
                         <p>6</p>
                     </div>
@@ -2044,7 +2039,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" id="spot7" aria-label="文澳(元泰、百世多麗)站點資訊">
+                <div class="content odd" tabindex="-1" id="spot7" aria-label="文澳(元泰、百世多麗)站點資訊">
                     <div class="num">
                         <p>7</p>
                     </div>
@@ -2077,7 +2072,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" id="spot8" aria-label="澎湖遊客中心站點資訊">
+                <div class="content even" tabindex="-1" id="spot8" aria-label="澎湖遊客中心站點資訊">
                     <div class="num">
                         <p>8</p>
                     </div>
@@ -2129,7 +2124,7 @@
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" id="spot9" aria-label="澎湖機場站點資訊">
+                <div class="content odd" tabindex="-1" id="spot9" aria-label="澎湖機場站點資訊">
                     <div class="num">
                         <p>9</p>
                     </div>
@@ -2152,9 +2147,6 @@
         </div>
         <!-- footer -->
         <footer class="footer" role="contentinfo" aria-label="網站頁尾">
-<div id="tabB" class="skip-link-wrap">
-<a href="#site-footer" title="跳至頁尾" accesskey="B" class="skip-link">跳至頁尾</a>
-</div>
             <div class="container">
                 <div class="copyright">
                     <p>交通部觀光署 澎湖國家風景區管理處 版權所有</p>
