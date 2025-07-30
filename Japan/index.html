@@ -7,17 +7,16 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=0" />
     <meta name="format-detection" content="telephone=no" />
-    <title>澎湖空港快線（ペンフー空港エクスプレス路線）</title>
-    <meta name="Title" content="澎湖空港快線（ペンフー空港エクスプレス路線）">
+    <title>澎湖空港高速ルート</title>
+    <meta name="Title" content="澎湖空港高速ルート">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;family=Noto+Sans+SC:wght@100;300;400;500;700;900&amp;family=Noto+Serif+SC:wght@400;500;700;900&amp;family=Roboto&amp;display=swap" />
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/animate.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./sass/style.scss" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
 
 
@@ -28,78 +27,80 @@
 
 <body>
     <noscript>
-        <div class="no-js-content">很抱歉，網站的某些功能在JavaScript沒有啟用的狀態下無法正常使用，請開啟瀏覽器JavaScript狀態。</div>
+        <div class="no-js-content">JavaScriptが無効になっているため、当ウェブサイトの一部機能が正しく動作しません。ブラウザのJavaScriptを有効にしてください。
+</div>
     </noscript>
     <div class="project">
         <!--公告-->
-        <div class="lightbox" role="dialog" aria-modal="true" aria-label="最新公告">
+        <div class="lightbox" role="dialog" aria-modal="true" aria-label="最新のお知らせ">
             <div class="container">
-                <button class="close_btn" aria-label="關閉公告"></button>
+                <button class="close_btn" aria-label="お知らせを閉じる"></button>
                 <figure>
-                    <img src="./images/announcement25042302.jpg" alt="最新公告圖片1" />
-                    <img src="./images/announcement25042301.jpg" alt="最新公告圖片2" />
+                    <img src="./images/announcement25042302.jpg" alt="最新のお知らせ画像1" />
+                    <img src="./images/announcement25042301.jpg" alt="最新のお知らせ画像2" />
                 </figure>
             </div>
         </div>
         <!-- header -->
         <div id="skipMain">
-            <a class="skip-main" href="#departure_station" title="跳到主要內容">跳到主要內容</a>
+            <a class="skip-main" href="#departure_station" title="メインコンテンツへ移動">メインコンテンツへ移動</a>
         </div>
-        <header class="header" id="header" role="banner" aria-label="網站標頭" tabindex="-1">
-            <a class="menuBtn" href="javascript:;" aria-label="主選單開關" tabindex="0">
+        <header class="header" id="header" role="banner" aria-label="サイトヘッダー" tabindex="-1">
+            <a class="menuBtn" href="javascript:;" aria-label="メインメニュー開閉" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             <div class="row">
                 <div class="logo">
-                    <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖國家風景區管理處LOGO">
-                        <img class="pc" src="./images/logo.svg" alt="澎湖國家風景區管理處標誌" />
-                        <img class="mobile" src="./images/logo_m.svg" alt="澎湖國家風景區管理處標誌（手機版）" />
+                    <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖国家風景管理処ホームページ（別ウィンドウで開く）">
+                        <img class="pc" src="./images/logo.svg" alt="" />
+                        <img class="mobile" src="./images/logo_m.svg" alt="" />
                     </a>
                 </div>
                 <div class="right">
-                    <div class="lang" aria-label="相關連結">
-                        <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖國家風景管理處首頁（另開視窗）">首頁</a>
+                    <div id="tabU" class="skip-link-wrap">
+<a href="#site-header" title="ナビゲーションへスキップ" accesskey="U" class="skip-link">ナビゲーションへスキップ</a>
+</div>    
+                    <div class="lang" aria-label="関連リンク">
+                        <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖国家風景区管理処 ホームページ（新しいウィンドウで開きます）">ホーム</a>
                         <a href="https://www.penghu-nsa.gov.tw/Info/Sitemap.htm#" target="_blank"
-                            aria-label="網站導覽（另開視窗）">網站導覽</a>
-                        <a href="https://www.penghu-nsa.gov.tw/Child/" target="_blank" aria-label="兒童版（另開視窗）">兒童版</a>
-                        <a href="https://www.penghu-nsa.gov.tw/Edu/" target="_blank" aria-label="環境教育網（另開視窗）">環境教育網</a>
+                            aria-label="サイトマップ（別ウィンドウで開く）">サイトマップ</a>
+                        <a href="https://www.penghu-nsa.gov.tw/Child/" target="_blank" aria-label="子供版（別ウィンドウで開く）">子供版</a>
+                        <a href="https://www.penghu-nsa.gov.tw/Edu/" target="_blank" aria-label="環境教育網（別ウィンドウで開く）">環境教育網</a>
                         <a href="https://admin.taiwan.net.tw/penghu-nsa/" target="_blank"
-                            aria-label="行政資訊網（另開視窗）">行政資訊網</a>
+                            aria-label="行政情報サイト（新しいウィンドウで開きます）">行政情報サイト</a>
                         <a href="https://www.penghu-nsa.gov.tw/MessageArea/RSS09.htm" target="_blank"
-                            aria-label="RSS（另開視窗）">RSS</a>
+                            aria-label="RSS（別ウィンドウで開く）">RSS</a>
                         <a class="fb" href="https://www.facebook.com/penghunsa" target="_blank"
-                            aria-label="Facebook（另開視窗）">
+                            aria-label="Facebook（別ウィンドウで開く）">
                             <img src="./images/fb.svg" alt="Facebook連結" />
                         </a>
                         <a href="https://www.penghu-nsa.gov.tw/ServiceMailExplanationC004100.aspx" target="_blank"
-                            aria-label="首長信箱（另開視窗）">首長信箱</a>
+                            aria-label="所長へのメール（新しいウィンドウで開きます）">所長へのメール</a>
 
-                        <nav id="nav_lang" class="nav_lang_wrap" aria-label="切換語言">
-                            <a class="nav_lang_parent tc_nav_parent" href="#" title="語言版本" role="button"
-                                aria-haspopup="true" aria-expanded="false">語言版本</a>
-                            <ul class="nav_lang tc_nav_lang" aria-label="語言清單">
-                                <li><a href="#" title="English" lang="en">English</a></li>
-                                <li><a href="#" title="日本語" lang="ja">日本語</a></li>
+                        <nav id="nav_lang" class="nav_lang_wrap" aria-label="言語を切り替え">
+                            <a class="nav_lang_parent tc_nav_parent" href="#" title="言語を切り替え" role="button"
+                                aria-haspopup="true" aria-expanded="false">言語を切り替え</a>
+                            <ul class="nav_lang tc_nav_lang" aria-label="言語リスト">
+                                <li><a href="/English/index.html" title="English" lang="en">English</a></li>
+                                <li><a href="/index.html" title="中文" lang="zh-Hant">中文</a></li>
                             </ul>
                         </nav>
-
-
                     </div>
                     <nav class="nav" role="navigation" aria-label="主導覽列">
                         <ul>
-                            <li><a href="#ebus">公車動態</a></li>
-                            <li><a href="#route">乘車路線</a></li>
-                            <li><a href="#transport">乘車資訊</a></li>
-                            <li><a href="#ticket-info">套票資訊</a></li>
-                            <li><a href="#transportation">轉乘資訊</a></li>
-                            <li><a href="#promotions">優惠資訊</a></li>
-                            <li><a href="#spot">站點周邊景點</a></li>
+                            <li><a href="#ebus">公共バス運行情報</a></li>
+                            <li><a href="#route">路線</a></li>
+                            <li><a href="#transport">乗車案内</a></li>
+                            <li><a href="#ticket-info">チケット情報</a></li>
+                            <li><a href="#transportation">乗り換え情報</a></li>
+                            <li><a href="#promotions">お得情報</a></li>
+                            <li><a href="#spot">スポット周辺情報</a></li>
                         </ul>
-                        <div class="lang-switch" aria-label="語言切換">
-                            <button aria-label="切換為英文">English</button>
-                            <button aria-label="切換為日語">日本語</button>
+                        <div class="lang-switch" aria-label="言語切り替え">
+                            <button aria-label="English に切り替え">English</button>
+                            <button aria-label="中文に切り替え">中文</button>
                         </div>
 
                     </nav>
@@ -107,10 +108,10 @@
             </div>
         </header>
         <!-- content -->
-        <section class="banner wow fadeIn" role="region" aria-label="主視覺橫幅">
+        <section class="banner wow fadeIn" role="region" aria-label="澎湖空港エクスプレス メインビジュアル">
 
             <div class="container">
-                <div class="bg" aria-label="澎湖空港快線主視覺" role="img">
+                <div class="bg" aria-label="澎湖空港エクスプレス メインビジュアル" role="img">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_圖層_1"
                         viewBox="0 0 906.4 608.87">
                         <defs>
@@ -1131,80 +1132,84 @@
 
             </div>
         </section>
-        <section class="ebus" tabindex="-1" role="region" aria-label="公車動態">
+        <section class="ebus" tabindex="-1" role="region" aria-label="バス運行情報">
             <div class="title" id="ebus">
-                <h2>公車動態</h2>
+                <h2>バス運行情報</h2>
             </div>
 
             <div class="busform">
                 <div class="timetable">
-                    <div class="pic"><img src="./images/time1.png?25001111" alt="馬公港與澎湖機場發車時間1-11班次" /></div>
-                    <div class="pic"><img src="./images/time2.png?25001111" alt="馬公港與澎湖機場發車時間12-22班次" /></div>
+                    <!-- <div class="pic"><img src="./images/time1.png?25001111" alt="馬公港と澎湖空港の発車時刻表" /></div>
+                    <div class="pic"><img src="./images/time2.png?25001111" alt="馬公港と澎湖空港の発車時刻表" /></div> -->
+                    <div class="pic"><img src="./images/taiwan-routeinfo.jpg" alt="路線マップ" /></div>
                 </div>
                 <div class="box">
-                    <div class="instruct " aria-label="去程">
+                    <div class="instruct " aria-label="往路">
                         <div class="inside">
                             <div class="pic">
                                 <img src="./images/icon-departure.svg" alt="" />
                             </div>
-                            <p>去程</p>
+                            <p>往路</p>
                         </div>
                     </div>
-                    <div class="station" id="departure_station" role="list" aria-label="去程站點列表">
+                    <div class="station" id="departure_station" role="list" aria-label="往路の停留所リスト">
+                        <div id="tabC" class="skip-link-wrap">
+<a href="#main-content" title="メインコンテンツへスキップ" accesskey="C" class="skip-link">メインコンテンツへスキップ</a>
+</div>
                         <div class="row row1">
-                            <div class="bus" tabindex="0" role="listitem" aria-label="馬公港站 尚未發車">
-                                <div class="num" aria-label="站點編號 1">
+                            <div class="bus"  role="listitem" aria-label="馬公港站">
+                                <div class="num" aria-label="停留所番号 1">
                                     <p>1</p>
                                 </div>
                                 <div class="stop">
                                     <p>馬公港</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" tabindex="0" role="listitem" aria-label="公車總站 尚未發車">
-                                <div class="num" aria-label="站點編號 2">
+                            <div class="bus"  role="listitem" aria-label="メインバスターミナル">
+                                <div class="num" aria-label="停留所番号 2">
                                     <p>2</p>
                                 </div>
                                 <div class="stop">
-                                    <p>公車總站</p>
+                                    <p>メインバスターミナル</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" tabindex="0" role="listitem" aria-label="開拓館（澎湖縣政府） 尚未發車">
-                                <div class="num" aria-label="站點編號 3">
+                            <div class="bus"  role="listitem" aria-label="開拓館(澎湖県政府)">
+                                <div class="num" aria-label="停留所番号 3">
                                     <p>3</p>
                                 </div>
                                 <div class="stop">
-                                    <p>開拓館<br>(澎湖縣政府)</p>
+                                    <p>開拓館<br>(澎湖県政府)</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" tabindex="0" role="listitem" aria-label="北辰市場（勝國） 尚未發車">
-                                <div class="num" aria-label="站點編號 4">
+                            <div class="bus"  role="listitem" aria-label="北辰市場（勝国）">
+                                <div class="num" aria-label="停留所番号 4">
                                     <p>4</p>
                                 </div>
                                 <div class="stop">
-                                    <p>北辰市場<br>(勝國)</p>
+                                    <p>北辰市場<br>(勝国)</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" tabindex="0" role="listitem" aria-label="南海遊客中心（澎澄、雅霖） 尚未發車">
-                                <div class="num num-right" aria-label="站點編號 5">
+                            <div class="bus"  role="listitem" aria-label="南海遊客中心(澎澄ホテル /雅霖ホテル) ">
+                                <div class="num num-right" aria-label="停留所番号 5">
                                     <p>5</p>
                                 </div>
                                 <div class="stop">
-                                    <p>南海遊客中心<br>(澎澄、雅霖)</p>
+                                    <p>南海遊客中心<br>(澎澄ホテル /雅霖ホテル) </p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
                         </div>
@@ -1213,48 +1218,48 @@
 
 
                         <div class="row row2">
-                            <div class="bus" role="listitem" aria-label="國際廣場（福朋喜來登） 尚未發車" tabindex="0">
+                            <div class="bus" role="listitem" aria-label="国際広場(喜來登ホテル)	" >
                                 <div class="num num-left">
                                     <p>6</p>
                                 </div>
                                 <div class="stop">
-                                    <p>國際廣場<br>(福朋喜來登)</p>
+                                    <p>国際広場<br>(喜來登ホテル)</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" role="listitem" aria-label="文澳（元泰、百世多麗） 尚未發車" tabindex="0">
+                            <div class="bus" role="listitem" aria-label="文澳(元泰ホテル、ペスカドレスホテル前)" >
                                 <div class="num">
                                     <p>7</p>
                                 </div>
                                 <div class="stop">
-                                    <p>文澳<br>(元泰、百世多麗)</p>
+                                    <p>文澳<br>(元泰ホテル、ペスカドレスホテル前)</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus on orange" role="listitem" aria-label="澎湖遊客中心 15:00進站" tabindex="0">
+                            <div class="bus on orange" role="listitem" aria-label="澎湖ビジターセンター" >
                                 <div class="num">
                                     <p>8</p>
                                 </div>
                                 <div class="stop">
-                                    <p>澎湖遊客中心</p>
+                                    <p>澎湖ビジターセンター</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="澎湖機場 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="澎湖空港" >
                                 <div class="num">
                                     <p>9</p>
                                 </div>
                                 <div class="stop">
-                                    <p>澎湖機場</p>
+                                    <p>澎湖空港</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
                         </div>
@@ -1265,56 +1270,55 @@
 
 
                 <div class="box">
-                    <div class="instruct" aria-label="回程">
+                    <div class="instruct" aria-label="復路">
                         <div class="inside">
                             <div class="pic"><img src="./images/icon-return.svg" alt=""></div>
-                            <p>回程</p>
+                            <p>復路</p>
                         </div>
                     </div>
-                    <div class="station return" id="return_station" role="list" aria-label="回程站點列表">
+                    <div class="station return" id="return_station" role="list" aria-label="復路の停留所リスト">
                         <div class="row row1">
-                            <div class="bus" role="listitem" aria-label="澎湖機場 尚未發車" tabindex="0">
+                            <div class="bus" role="listitem" aria-label="澎湖空港">
                                 <div class="num">
                                     <p>9</p>
                                 </div>
                                 <div class="stop">
-                                    <p>澎湖機場</p>
+                                    <p>澎湖空港</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus" role="listitem" aria-label="澎湖遊客中心 尚未發車" tabindex="0">
+                            <div class="bus" role="listitem" aria-label="澎湖ビジターセンター 未発車">
                                 <div class="num">
                                     <p>8</p>
                                 </div>
                                 <div class="stop">
-                                    <p>澎湖遊客中心</p>
+                                    <p>澎湖ビジターセンター</p>
                                 </div>
                                 <div class="state">
-                                    <p>尚未發車</p>
+                                    <p>未発車</p>
                                 </div>
                             </div>
-                            <div class="bus orange on" role="listitem" aria-label="文澳（元泰、百世多麗） 15:00進站" tabindex="0">
+                            <div class="bus orange on" role="listitem" aria-label="文澳(元泰ホテル、ペスカドレスホテル前)">
                                 <div class="num">
                                     <p>7</p>
                                 </div>
-                                <div class="stop">
-                                    <p>文澳<br>(元泰、百世多麗)</p>
+                                <div class="stop"><p>文澳</br>(元泰ホテル、ペスカドレスホテル前)</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="國際廣場（福朋喜來登） 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="国際広場(喜來登ホテル)">
                                 <div class="num num-right">
                                     <p>6</p>
                                 </div>
                                 <div class="stop">
-                                    <p>國際廣場<br>(福朋喜來登)</p>
+                                    <p>国際広場<br>(喜來登ホテル)</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
                         </div>
@@ -1323,51 +1327,51 @@
                         <div class="line"><img src="./images/line.png" alt=""></div>
 
                         <div class="row row2">
-                            <div class="bus orange" role="listitem" aria-label="南海遊客中心（澎澄、雅霖） 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="南海遊客中心(澎澄ホテル /雅霖ホテル) ">
                                 <div class="num num-left">
                                     <p>5</p>
                                 </div>
                                 <div class="stop">
-                                    <p>南海遊客中心<br>(澎澄、雅霖)</p>
+                                    <p>南海遊客中心<br>(澎澄ホテル、雅霖ホテル)</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="北辰市場（勝國） 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="北辰市場(勝国)">
                                 <div class="num">
                                     <p>4</p>
                                 </div>
                                 <div class="stop">
-                                    <p>北辰市場<br>(勝國)</p>
+                                    <p>北辰市場<br>(勝国)</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="開拓館（澎湖縣政府）站 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="開拓館(澎湖県政府)">
                                 <div class="num">
                                     <p>3</p>
                                 </div>
                                 <div class="stop">
-                                    <p>開拓館<br>(澎湖縣政府)站</p>
+                                    <p>開拓館<br>(澎湖県政府)</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="公車總站 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="メインバスターミナル">
                                 <div class="num">
                                     <p>2</p>
                                 </div>
                                 <div class="stop">
-                                    <p>公車總站</p>
+                                    <p>メインバスターミナル</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
-                            <div class="bus orange" role="listitem" aria-label="馬公港 15:00進站" tabindex="0">
+                            <div class="bus orange" role="listitem" aria-label="馬公港">
                                 <div class="num">
                                     <p>1</p>
                                 </div>
@@ -1375,7 +1379,7 @@
                                     <p>馬公港</p>
                                 </div>
                                 <div class="state">
-                                    <p>15:00進站</p>
+                                    <p>15:00 到着予定</p>
                                 </div>
                             </div>
                         </div>
@@ -1387,93 +1391,95 @@
 
             </div>
         </section>
-        <section class="route" tabindex="-1" role="region" aria-label="乘車路線">
+        <section class="route" tabindex="-1" role="region" aria-label="運行ルート">
             <div class="title" id="route">
                 <div class="pic">
                     <img src="./images/title_icon1.svg?2507" alt="" />
                 </div>
-                <h2>乘車路線</h2>
+                <h2>運行ルート</h2>
             </div>
             <div class="subtitle" aria-hidden="true"></div>
             <div class="info">
-                <p>「台灣好行－澎湖空港快線」為往返澎湖機場與馬公市區的接駁巴士，沿途規劃9個站點，串聯機場、馬公港、公車總站的陸、海、空交通節點，大大提升交通的便利。現在就跟著澎湖空港快線一起去旅行吧！</p>
+                <p>「台湾好行－澎湖空港エクスプレス」は、澎湖空港と馬公市街地を結ぶシャトルバスです。
+路線上には9か所の停留所があり、空港・馬公港・バスターミナルなど陸・海・空の交通拠点をつなぎ、移動の利便性を大きく向上させます。
+さあ、澎湖空港エクスプレスに乗って旅に出かけましょう！</p>
 
             </div>
-            <div class="route_map" role="list" aria-label="路線站點地圖">
+            <div class="route_map" role="list" aria-label="路線マップ">
                 <div class="row">
-                    <a class="station" href="#spot1" role="listitem" aria-label="馬公港站">
+                    <a class="station" href="#spot1" role="listitem" aria-label="馬公港">
                         <p>馬公港</p>
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" /></div>
                     </a>
-                    <a class="station mainStation" href="#spot2" role="listitem" aria-label="公車總站">
-                        <p>公車總站</p>
+                    <a class="station mainStation" href="#spot2" role="listitem" aria-label="メインバスターミナル">
+                        <p>メインバスターミナル</p>
                         <div class="icon">
                             <img src="./images/icon-location-white.svg" alt="" />
                         </div>
                     </a>
-                    <a class="station" href="#spot3" role="listitem" aria-label="開拓館(澎湖縣政府)站">
-                        <p>開拓館 <br />(澎湖縣政府)</p>
+                    <a class="station" href="#spot3" role="listitem" aria-label="開拓館(澎湖県政府)">
+                        <p>開拓館 <br />(澎湖県政府)</p>
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
                     </a>
-                    <a class="station" href="#spot4" role="listitem" aria-label="北辰市場（國勝）站">
+                    <a class="station" href="#spot4" role="listitem" aria-label="北辰市場(勝国)站">
                         <p>北辰市場
-                            </br>(勝國)
+                            </br>(勝国)
                         </p>
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
                     </a>
-                    <a class="station" href="#spot5" role="listitem" aria-label="南海遊客中心(澎澄、雅霖)站">
-                        <p>南海遊客中心 <br />(澎澄、雅霖)</p>
+                    <a class="station" href="#spot5" role="listitem" aria-label="南海遊客中心(澎澄ホテル /雅霖ホテル) ">
+                        <p>南海遊客中心 <br />(澎澄ホテル /雅霖ホテル) </p>
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
                     </a>
                 </div>
                 <div class="row row2" role="list" aria-label="路線站點地圖（續）">
-                    <a class="station" href="#spot9" role="listitem" aria-label="澎湖機場站">
+                    <a class="station" href="#spot9" role="listitem" aria-label="澎湖空港">
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
-                        <p>澎湖機場</p>
+                        <p>澎湖空港</p>
                     </a>
-                    <a class="station" href="#spot8" role="listitem" aria-label="澎湖遊客中心站">
+                    <a class="station" href="#spot8" role="listitem" aria-label="澎湖ビジターセンター">
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
-                        <p>澎湖遊客中心</p>
+                        <p>澎湖ビジターセンター</p>
                     </a>
-                    <a class="station" href="#spot7" role="listitem" aria-label="文澳(元泰、百世多麗)站">
+                    <a class="station" href="#spot7" role="listitem" aria-label="文澳(元泰ホテル、ペスカドレスホテル前)">
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
-                        <p>文澳</br>(元泰、百世多麗)</p>
+                        <p>文澳</br>(元泰ホテル、ペスカドレスホテル前)</p>
                     </a>
-                    <a class="station" href="#spot6" role="listitem" aria-label="國際廣場（福朋喜來登）站">
+                    <a class="station" href="#spot6" role="listitem" aria-label="国際広場(喜來登ホテル)">
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
                         <p>
-                            國際廣場</br>(福朋喜來登)
+                            国際広場</br>(喜來登ホテル)
                         </p>
                     </a>
                 </div>
-                <div class="map"><img src="./images/map.png" alt="澎湖空港快線路線地圖" /></div>
+                <div class="map"><img src="./images/map.png" alt="路線マップ" /></div>
             </div>
         </section>
 
-        <section class="transport" role="region" aria-label="乘車資訊">
+        <section class="transport" role="region" aria-label="乗車案内">
             <div class="title" id="transport" tabindex="-1">
                 <div class="pic"><img src="./images/title_icon2.svg" alt="" /></div>
-                <h2>乘車資訊</h2>
+                <h2>乗車案内</h2>
             </div>
             <div class="content">
                 <div class="row">
                     <div class="box">
                         <div class="title">
                             <div class="pic"><img src="./images/icon-fare.svg" /></div>
-                            <p>票價資訊</p>
+                            <p>料金</p>
                         </div>
                         <div class="inner">
                             <div class="main mb-2">
-                                票價
-                                <span>30</span> 元/單程
+                                片道
+                                <span>NT$30</span> 
                             </div>
-                            <div class="orange">即日起至114年10月31日止，憑電子票證享半價優惠！</div>
+                            <div class="orange">車内では、現金（運賃箱に投入）やICカードがご利用いただけます。ICカード（悠遊カード、iPASS、icash）でお支払いの場合、運賃が半額となります（2025年10月31日まで）</div>
                         </div>
                     </div>
                     <div class="box hotline">
                         <div class="title">
-                            <div class="pic"><img src="./images/icon-information.svg" alt="服務專線圖示" /></div>
-                            <p>服務專線</p>
+                            <div class="pic"><img src="./images/icon-information.svg" alt="" /></div>
+                            <p>サービス専用ダイヤル</p>
                         </div>
                         <div class="inner">
                             <div class="point">
@@ -1481,7 +1487,7 @@
                                 <span>(02)8793-9288</span>
                             </div>
                             <div class="point">
-                                <span> 24小時免付費旅遊諮詢熱線</span>
+                                <span> 24時間・無料旅行相談ホットライン</span>
                             </div>
                             <div class="main"><span>0800-011765</span></div>
                         </div>
@@ -1492,17 +1498,17 @@
                 <div class="box">
                     <div class="title">
                         <div class="pic"><img src="./images/icon-links.svg" /></div>
-                        <p>相關連結</p>
+                        <p>関連リンク</p>
                     </div>
                     <div class="inner">
                         <a class="links" href="https://www.taiwantrip.com.tw/" target="_blank"
-                            aria-label="台灣好行官方網站(另開視窗)">
-                            <p>台灣好行官方網站</p>
+                            aria-label="台湾好行公式サイト（別ウィンドウで開く）">
+                            <p>台湾好行公式サイト</p>
                             <div class="link"><img src="./images/link.svg" alt="" /></div>
                         </a>
                         <a class="links" href="https://www.phpto.gov.tw/home.jsp?id=29" target="_blank"
-                            aria-label="澎湖各線公車資訊(另開視窗)">
-                            <p>澎湖各線公車資訊</p>
+                            aria-label="澎湖バス各路線情報（別ウィンドウで開く）">
+                            <p>澎湖バス各路線情報</p>
                             <div class="link"><img src="./images/link.svg" /></div>
                         </a>
                     </div>
@@ -1513,85 +1519,85 @@
                     <div class="box col-4">
                         <div class="title">
                             <div class="pic"><img src="./images/icon-fare.svg" /></div>
-                            <p>A款套票</p>
+                            <p>Aプラン	</p>
                         </div>
                         <div class="inner">
-                            <p class="innerp orange mb-2">暢遊北環線一日券＋空港快線</p>
+                            <p class="innerp orange mb-2">北環線を満喫</p>
                             <div class="main mt-3 mb-3">
-                                <p>優惠價</br>
-                                    <span>300</span>元/人
+                                <p>割引価格</br>
+                                    <span>NT$300</span>
                                 </p>
                             </div>
 
-                            <p class="orange">經典路線首選!走訪跨海大橋、通樑古榕，感受澎湖風情!</p>
-                            <p class="ticke mt-2">澎湖空港快線一日券</br>媽宮・北環線一日券</p>
-                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="A款套票立即購買" tabindex="0">
-                                <i class="fas fa-shopping-cart "></i>立即購買
+                            <p class="orange">イチオシ定番ルート！跨海大橋や通梁のガジュマルを巡り、澎湖の風情を堪能！</p>
+                            <p class="ticke mt-2">空港エクスプレス一日乗車券×1名</br>媽宮北環線一日乗車券×1名</p>
+                            <button class="btn w-100 purchase-btn mb-3 mt-3"  tabindex="0">
+                                <i class="fas fa-shopping-cart "></i>今すぐ購入
                             </button>
                         </div>
                     </div>
-                    <div class="box col-4" aria-label="B款套票">
+                    <div class="box col-4" aria-label="Bプラン">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
                             </div>
-                            <p>B款套票</p>
+                            <p>Bプラン</p>
                         </div>
                         <div class="inner">
-                            <p class="innerp orange mb-2">湖西慢旅趣一日券+空港快線</p>
+                            <p class="innerp orange mb-2">湖西ぶらり旅ス</p>
                             <div class="main mt-3 mb-3">
-                                <p>優惠價<br>
-                                    <span>250</span>元/人
+                                <p>割引価<br>
+                                    <span>NT$250</span>
                                 </p>
                             </div>
-                            <p class="orange">當日不限次數搭乘空港快線，市區-機場輕鬆抵達真方便</p>
-                            <p class="ticket mt-2">澎湖空港快線一日券<br>媽宮・湖西線一日券</p>
-                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="B款套票立即購買" tabindex="0">
-                                <i class="fas fa-shopping-cart "></i>立即購買
+                            <p class="orange">湖西の秘境を気ままに探索し、自然と文化の完璧な調和をゆったりと堪能！</p>
+                            <p class="ticket mt-2">空港エクスプレス一日乗車券×1名<br>媽宮湖西線一日乗車券×1名</p>
+                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="Bプラン今すぐ購入" tabindex="0">
+                                <i class="fas fa-shopping-cart "></i>今すぐ購入
                             </button>
                         </div>
                     </div>
 
-                    <div class="box col-4" aria-label="C款套票">
+                    <div class="box col-4" aria-label="Cプラン">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
                             </div>
-                            <p>C款套票</p>
+                            <p>Cプラン</p>
                         </div>
                         <div class="inner">
-                            <p class="innerp orange mb-2">澎南輕旅行一日券+空港快線</p>
+                            <p class="innerp orange mb-2">澎南プチ旅行</p>
                             <div class="main mt-3 mb-3">
-                                <p>優惠價<br>
-                                    <span>200</span>元/人
+                                <p>割引価格<br>
+                                    <span>NT$200</span>
                                 </p>
                             </div>
-                            <p class="orange">沿著海岸線感受陽光與海風，澎南小旅行超Chill!</p>
-                            <p class="ticket mt-2">澎湖空港快線一日券<br>媽宮・澎南線一日券</p>
-                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="C款套票立即購買" tabindex="0">
-                                <i class="fas fa-shopping-cart "></i>立即購買
+                            <p class="orange">海岸線をたどりながら、太陽と海風を感じる、超チルな澎南プチ旅行！</p>
+                            <p class="ticket mt-2">空港エクスプレス一日乗車券×1名<br>媽宮澎南線一日乗車券×1名</p>
+                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="Cプラン今すぐ購入" tabindex="0">
+                                <i class="fas fa-shopping-cart "></i>今すぐ購入
                             </button>
                         </div>
                     </div>
 
-                    <div class="box col-4" aria-label="D款套票">
+                    <div class="box col-4" aria-label="Dプラン">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
                             </div>
-                            <p>D款套票</p>
+                            <p>Dプラン</p>
                         </div>
                         <div class="inner">
-                            <p class="innerp orange mb-2">空港快線一日券</p>
+                            <p class="innerp orange mb-2">空港エクスプレス一日乗車券</p>
                             <div class="main mt-3 mb-3">
-                                <p>優惠價<br>
-                                    <span>100</span>元/人
+                                <p>割引価格<br>
+                                    <span>NT$100</span>
                                 </p>
                             </div>
-                            <p class="orange">當日不限次數搭乘空港快線，市區-機場輕鬆抵達真方便</p>
-                            <p class="ticket mt-2">澎湖空港快線一日券</p>
-                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="D款套票立即購買" tabindex="0">
-                                <i class="fas fa-shopping-cart"></i>立即購買
+                            <p class="orange">空港エクスプレスが一日何度でも乗り放題。市内-空港間の移動が便利でラクラク！</p>
+                            <p class="ticket mt-2">空港エクスプレス一日乗車券×1名</p>
+                            <button class="btn w-100 purchase-btn mb-3 mt-3" aria-label="Dプラン今すぐ購" tabindex="0">
+                                <i class="fas fa-shopping-cart"></i>今すぐ購入
                             </button>
                         </div>
                     </div>
@@ -1606,25 +1612,25 @@
                     </div>
                     <div class="ticket-inner">
                         <p class="main ">
-                            販售日期：
-                            <span class="orange">2025年7月中</span> 開賣！
+                            発売日：
+                            <span class="orange">2025年7月中に発売開始！</span>
                         </p>
                         <p class="main">
-                            購買方式：採用
-                            <span class="orange">線上購票</span>，可至澎湖好行或雄獅旅遊官網選購，取票方式依照銷售網頁說明為主。
+                            購入方法：
+                            <span class="orange">オンラインで乗車券を販売</span>いたします。澎湖好行公式サイト、またはライオントラベル公式サイトにてご購入ください。発券方法は各販売ページの案内をご覧ください。
                         </p>
                         <p class="main">
-                            使用期限：
-                            <span class="orange">2026.6.30</span>
+                            有効期限：
+                            <span class="orange">セット券の有効期限は2026年6月30日まで</span>
                         </p>
                         <div class="inner">
                             <a class="links" href="https://www.penghufuneasy.com.tw/penghufuneasy/index.php"
-                                target="_blank" aria-label="澎湖好行網址(另開視窗)">
-                                <p>澎湖好行網址</p>
+                                target="_blank" aria-label="澎湖好行公式サイト（別ウィンドウで開く）">
+                                <p>澎湖好行公式サイト</p>
                                 <div class="link"><img src="./images/link.svg" /></div>
                             </a>
-                            <a class="links" href="https://reurl.cc/Ln0oE7" target="_blank" aria-label="雄獅旅遊官網(另開視窗)">
-                                <p>雄獅旅遊官網</p>
+                            <a class="links" href="https://reurl.cc/Ln0oE7" target="_blank" aria-label="Lion Travel（別ウィンドウで開く）">
+                                <p>Lion Travel</p>
                                 <div class="link"><img src="./images/link.svg" /></div>
                             </a>
                         </div>
@@ -1636,37 +1642,35 @@
                 <div class="box transportation" id="transportation" tabindex="-1">
                     <div class="title">
                         <div class="pic"><img src="./images/icon-transportation.svg" /></div>
-                        <p>轉乘資訊</p>
+                        <p>乗り換え情報</p>
                     </div>
                     <div class="inner">
-                        <div class="point" aria-label="公車總站轉乘資訊">
-                            <span class="bold">公車總站</span>
-                            <p>可轉乘澎湖各路線客運<br /> 詳細資訊洽各業者或澎湖縣政府公共車船管理處<br /> (06)9272376</p>
+                        <div class="point" aria-label="メインバスターミナル">
+                            <span class="bold">メインバスターミナル</span>
+                            <p> 澎湖各路線バスに乗り換え可能<br />  詳細は各バス会社または澎湖県公共車船管理処まで<br /> (06)9272376</p>
                         </div>
                         <div class="point" aria-label="馬公港轉乘資訊">
                             <span class="bold">馬公港</span>
-                            <p>可轉乘船班至 <br /> 高雄、嘉義布袋<br /> 詳細資訊洽馬公港旅客服務中心 <br /> (06) 927 2303</p>
+                            <p>高雄・嘉義布袋行きの船便に乗り換え可能<br />  詳細は馬公港観光サービスセンターまで<br /> (06) 927 2303</p>
                         </div>
-                        <div class="point" aria-label="南海遊客中心轉乘資訊">
-                            <span class="bold">南海遊客中心</span>
-                            <p>可轉乘船班至 <br /> 澎湖外島【七美、望安、虎井嶼、桶盤等】
-                                <br /> 詳細資訊洽各業者或南海遊客中心
+                        <div class="point" aria-label="南海ビジターセンターでの乗り換え案内">
+                            <span class="bold">南海ビジターセンター</span>
+                            <p> 澎湖の離島（七美・望安・虎井嶼・桶盤 など）行きの船便に乗り換え可能
+                                <br /> 詳細は各業者または南海ビジターセンターまで
                                 <br /> (06) 926 4738
                             </p>
                         </div>
-                        <div class="point" aria-label="南海候船室轉乘資訊">
-                            <span class="bold">南海候船室</span>
-                            <p>可轉乘船班至
-                                <br /> 澎湖外島【七美、望安、高雄】
-                                <br /> 詳細資訊洽各業者或南海候船室
+                        <div class="point" aria-label="南海待合室での乗り換え案内">
+                            <span class="bold">南海待合室</span>
+                            <p>澎湖の離島（七美・望安・高雄）行きの船便に乗り換え可能
+                                <br /> 詳細は各業者または南海待合室まで
                                 <br /> (06) 927 2376
                             </p>
                         </div>
-                        <div class="point" aria-label="澎湖機場轉乘資訊">
-                            <span class="bold">澎湖機場</span>
-                            <p>可搭乘航班至
-                                <br /> 台北(松山)、台中、嘉義、台南、高雄、金門
-                                <br /> 詳細資訊洽各航空公司
+                        <div class="point" aria-label="澎湖空港での乗り換え案内">
+                            <span class="bold">澎湖空港</span>
+                            <p>台北（松山）、台中、嘉義、台南、高雄、金門行きのフライトに搭乗可能
+                                <br /> 詳細は各航空会社まで
                                 <br /> (06) 922 8188
                             </p>
                         </div>
@@ -1675,15 +1679,15 @@
                 <div class="box" id="promotions" tabindex="-1">
                     <div class="title">
                         <div class="pic"><img src="./images/icon-promotions.svg" /></div>
-                        <p>優惠資訊</p>
+                        <p>キャンペーン情報</p>
                     </div>
                     <div class="inner">
                         <p class="point">
-                            活動期間憑「台灣好行-澎湖空港快線」乘車證明，至特約店家以電子支付消費，可享專屬優惠！
+                            キャンペーン期間中、特約店をご利用の際に「台湾トリップ-空港エクスプレス乗車証明」をご提示いただくと、優待サービスが受けられます。
                         </p>
                         <a class="links" href="https://drive.google.com/drive/folders/1koormAIbpqU8GpWN77by8TK7GmM-zGkm"
-                            target="_blank" aria-label="特約店家名單(另開視窗)">
-                            <p>特約店家名單</p>
+                            target="_blank" aria-label="特約店一覧（別ウィンドウで開く）">
+                            <p>特約店一覧</p>
                             <div class="link"><img src="./images/link.svg" /></div>
                         </a>
                     </div>
@@ -1693,10 +1697,10 @@
         <section class="spot">
             <div class="title" id="spot" tabindex="-1">
                 <div class="pic"><img src="./images/title_icon3.svg" /></div>
-                <h2>站點周邊景點</h2>
+                <h2>観光スポット</h2>
             </div>
             <div class="container">
-                <div class="content " id="spot1" tabindex="-1" aria-label="馬公港站點資訊">
+                <div class="content " id="spot1" tabindex="-1" aria-label="馬公港">
                     <div class="num">
                         <p>1</p>
                     </div>
@@ -1706,9 +1710,9 @@
                     <div class="name">馬公港</div>
                     <div class="cards">
                         <a class="card" href="https://www.phhcc.gov.tw/home.jsp?id=10143" target="_blank"
-                            aria-label="洪根深美術館(另開視窗)">
+                            aria-label="洪根深美術館(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot13.jpg" alt="洪根深美術館圖片" />
+                                <img src="./images/spot13.jpg" alt="洪根深美術館の画像" />
                             </div>
 
                             <div class="text">
@@ -1718,16 +1722,16 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約290公尺</p>
+                                        <p class="cn">徒歩約290メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=4bda9781-612a-407d-a33d-9cbe86f6f655&Keyword=%e9%a0%86%e6%89%bf&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="順承門(另開視窗)">
+                            target="_blank" aria-label="順承門（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot5.png" alt="順承門圖片" />
+                                <img src="./images/spot5.png" alt="順承門の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1736,16 +1740,16 @@
                                 <div class="info">
                                     <div class="icon"><img src="/images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約400公尺</p>
+                                        <p class="cn">徒歩約400メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=1c71e770-ea73-4930-918e-e9b22112088e&Keyword=%e5%8d%81%e6%9d%91&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="篤行十村(另開視窗)">
+                            target="_blank" aria-label="篤行十村（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot6.png" alt="篤行十村圖片" />
+                                <img src="./images/spot6.png" alt="篤行十村の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1754,68 +1758,68 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約600公尺</p>
+                                        <p class="cn">徒歩約600メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=3a1879bb-135f-4343-900d-50bb33178872&Keyword=%e9%87%91%e9%be%9c%e9%a0%ad&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="金龜頭礮臺(另開視窗)">
+                            target="_blank" aria-label="金亀頭砲台（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot7.png" alt="金龜頭礮臺圖片" />
+                                <img src="./images/spot7.png" alt="金亀頭砲台の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">金龜頭礮臺</p>
+                                    <p class="cn">金亀頭砲台</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約900公尺</p>
+                                        <p class="cn">徒歩約900メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/Mx8YHrVwHLb9kEcR8" target="_blank"
-                        aria-label="googlemap馬公港位置(另開視窗)">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで馬公港の場所を表示（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" tabindex="-1" id="spot2" aria-label="公車總站站點資訊">
+                <div class="content even" tabindex="-1" id="spot2" aria-label="メインバスターミナル">
                     <div class="num">
                         <p>2</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">公車總站</div>
+                    <div class="name">メインバスターミナル</div>
                     <div class="cards">
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=74749e11-6e95-4a26-864d-100860ddeb05&Keyword=%e8%a7%80%e9%9f%b3%e4%ba%ad%e8%a6%aa%e6%b0%b4%e9%81%8a%e6%86%a9%e5%8d%80&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="觀音亭親水遊憩區、西瀛虹橋（另開視窗）">
+                            target="_blank" aria-label="観音亭親水レジャー区（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot1.png" alt="觀音亭親水遊憩區、西瀛虹橋圖片" />
+                                <img src="./images/spot1.png" alt="観音亭親水レジャー区の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">觀音亭親水遊憩區、西瀛虹橋</p>
+                                    <p class="cn">観音亭親水レジャー区</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約300公尺</p>
+                                        <p class="cn">徒歩約300メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=73eae1ff-0b2f-4bfd-b1b3-b37f0c611a31&Keyword=%e5%a4%a9%e5%90%8e&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="澎湖天后宮（另開視窗）">
+                            target="_blank" aria-label="澎湖天后宮（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot2.png" alt="澎湖天后宮圖片" />
+                                <img src="./images/spot2.png" alt="澎湖天后宮の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1824,16 +1828,16 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約400公尺</p>
+                                        <p class="cn">徒歩約400メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=fc0fbcca-8b66-4629-8d5b-694881eb5e3f&Keyword=%e5%9b%9b%e7%9c%bc&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="中央老街（另開視窗）">
+                            target="_blank" aria-label="中央老街（新しいウィンドウで開く）">
                             <div class="pic">
-                                <img src="./images/spot3.png" alt="中央老街圖片" />
+                                <img src="./images/spot3.png" alt="中央老街の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1842,64 +1846,64 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約300公尺</p>
+                                        <p class="cn">徒歩約300メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/GtPeuJkNwUp6L1Xi8" target="_blank"
-                        aria-label="googlemap公車總站位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで馬公港の場所を表示（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" tabindex="-1" id="spot3" aria-label="開拓館(澎湖縣政府)站點資訊">
+                <div class="content even" tabindex="-1" id="spot3" aria-label="開拓館(澎湖県政府)">
                     <div class="num">
                         <p>3</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">開拓館(澎湖縣政府)</div>
+                    <div class="name">開拓館(澎湖県政府)</div>
                     <div class="cards">
                         <a class="card" tabindex="0" href="https://phkt.phhcc.gov.tw/ch/index.jsp" target="_blank"
-                            aria-label="澎湖開拓館(另開視窗)">
+                            aria-label="開拓館(澎湖県政府)(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/scenic_4_3.jpg" alt="澎湖開拓館圖片" />
+                                <img src="./images/scenic_4_3.jpg" alt="開拓館(澎湖県政府)の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">澎湖開拓館</p>
+                                    <p class="cn">開拓館(澎湖県政府)</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站:約10公尺</p>
+                                        <p class="cn">徒歩約0メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" href="https://maps.app.goo.gl/XvsvtazCJdgbTSoPA" target="_blank"
-                        aria-label="googlemap澎湖開拓館位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで澎湖開拓館の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" tabindex="-1" id="spot4" aria-label="北辰市場(勝國)站點資訊">
+                <div class="content even" tabindex="-1" id="spot4" aria-label="北辰市場(勝国)">
                     <div class="num">
                         <p>4</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">北辰市場(勝國)</div>
+                    <div class="name">北辰市場(勝国)</div>
                     <div class="cards">
                         <a class="card" href="https://maps.app.goo.gl/xgMgWFpvbTJ4w64L6" target="_blank"
-                            aria-label="北辰市場(另開視窗)">
+                            aria-label="北辰市場(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/scenic_4_2.jpg" alt="北辰市場圖片" />
+                                <img src="./images/scenic_4_2.jpg" alt="北辰市場の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1908,32 +1912,32 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約150公尺</p>
+                                        <p class="cn">徒歩約150メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/DaUi2aPkcusvqyLU6" target="_blank"
-                        aria-label="googlemap北辰市場位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで北辰市場の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" tabindex="-1" id="spot5" aria-label="南海遊客中心(澎澄、雅霖)站點資訊">
+                <div class="content odd" tabindex="-1" id="spot5" aria-label="南海遊客中心(澎澄ホテル /雅霖ホテル)">
                     <div class="num">
                         <p>5</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">南海遊客中心(澎澄、雅霖) </div>
+                    <div class="name">南海遊客中心(澎澄ホテル /雅霖ホテル)</div>
                     <div class="cards">
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=61b04cba-c7dc-4e97-9929-1eb39f0ad9d5&amp;Keyword=%e5%8d%97%e6%b5%b7&amp;SortType=1&amp;SearchAdvanced=False&amp;Language=1028"
-                            target="_blank" aria-label="南海遊客中心(另開視窗)">
+                            target="_blank" aria-label="南海遊客中心(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot8.png" alt="南海遊客中心圖片" />
+                                <img src="./images/spot8.png" alt="南海遊客中心の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1942,49 +1946,49 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt=""></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約200公尺</p>
+                                        <p class="cn">徒歩約200メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card" href="https://maps.app.goo.gl/y4XVzi2torMH14Ty6" target="_blank"
-                            aria-label="南海候船室(另開視窗)">
+                            aria-label="南海待合室(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot9.jpg" alt="南海候船室圖片" />
+                                <img src="./images/spot9.jpg" alt="南海待合室の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">南海候船室</p>
+                                    <p class="cn">南海待合室</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約80公尺</p>
+                                        <p class="cn">徒歩約80メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/e31tvLXG3N3h48J77" target="_blank"
-                        aria-label="googlemap南海遊客中心位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで南海遊客中心の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" tabindex="-1" id="spot6" aria-label="國際廣場(福朋喜來登)站點資訊">
+                <div class="content even" tabindex="-1" id="spot6" aria-label="国際広場(喜來登ホテル)">
                     <div class="num">
                         <p>6</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">國際廣場(福朋喜來登)</div>
+                    <div class="name">国際広場(喜來登ホテル)</div>
                     <div class="cards">
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=5478950e-af62-4e78-a139-72cc04a7bcdd&Keyword=%e7%94%9f%e6%b4%bb&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="澎湖生活博物館(另開視窗)">
+                            target="_blank" aria-label="澎湖生活博物館(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot10.png" alt="澎湖生活博物館圖片" />
+                                <img src="./images/spot10.png" alt="澎湖生活博物館の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -1993,15 +1997,15 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約500公尺</p>
+                                        <p class="cn">徒歩約500メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card" href="https://maps.app.goo.gl/Bk3JGUCxXyP7rPHR6" target="_blank"
-                            aria-label="澎湖魚市場(另開視窗)">
+                            aria-label="澎湖魚市場(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot14.jpg" alt="澎湖魚市場圖片" />
+                                <img src="./images/spot14.jpg" alt="澎湖魚市場の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -2010,48 +2014,48 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約250公尺</p>
+                                        <p class="cn">徒歩約250メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card" href="https://vrlife.com.tw/penghuevent/index.php?action=index" target="_blank"
-                            aria-label="澎湖海洋地質公園中心(另開視窗)">
+                            aria-label="澎湖海洋地質公園センター(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot15.jpg" alt="澎湖海洋地質公園中心圖片" />
+                                <img src="./images/spot15.jpg" alt="澎湖海洋地質公園センターの画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">澎湖海洋地質公園中心</p>
+                                    <p class="cn">澎湖海洋地質公園センター</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約350公尺</p>
+                                        <p class="cn">徒歩約350メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" href="https://maps.app.goo.gl/V75Ps5KET4tH7cjc7" tabindex="0" target="_blank"
-                        aria-label="googlemap國際廣場位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="googlemap国際広場の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" tabindex="-1" id="spot7" aria-label="文澳(元泰、百世多麗)站點資訊">
+                <div class="content odd" tabindex="-1" id="spot7" aria-label="文澳(元泰ホテル、ペスカドレスホテル前)">
                     <div class="num">
                         <p>7</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">文澳(元泰、百世多麗)</div>
+                    <div class="name">文澳(元泰ホテル、ペスカドレスホテル前)</div>
                     <div class="cards">
                         <a class="card" href="https://www.facebook.com/u9210739/?locale=zh_TW" target="_blank"
-                            aria-label="文澳祖師廟(另開視窗)">
+                            aria-label="文澳祖師廟(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/scenic_6_1.jpg" alt="文澳祖師廟圖片" />
+                                <img src="./images/scenic_6_1.jpg" alt="文澳祖師廟の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -2060,50 +2064,50 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約400公尺</p>
+                                        <p class="cn">徒歩約400メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/5EBPijBkZQ3bUngy7" target="_blank"
-                        aria-label="googlemap文澳祖師廟位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで文澳祖師の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content even" tabindex="-1" id="spot8" aria-label="澎湖遊客中心站點資訊">
+                <div class="content even" tabindex="-1" id="spot8" aria-label="澎湖ビジターセンター">
                     <div class="num">
                         <p>8</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">澎湖遊客中心</div>
+                    <div class="name">澎湖ビジターセンター</div>
                     <div class="cards">
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=4456041f-2623-461c-aa22-435b7038968c&Keyword=%e6%be%8e%e6%b9%96%e9%81%8a%e5%ae%a2&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="澎湖遊客中心(另開視窗)">
+                            target="_blank" aria-label="澎湖ビジターセンター(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot16.jpg" alt="澎湖遊客中心圖片" />
+                                <img src="./images/spot16.jpg" alt="澎湖ビジターセンターの画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
-                                    <p class="cn">澎湖遊客中心</p>
+                                    <p class="cn">澎湖ビジターセンター</p>
                                 </div>
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約50公尺</p>
+                                        <p class="cn">徒歩約50メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a class="card"
                             href="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=48a98a79-d84f-4e06-8443-08903ea8cb04&Keyword=%e9%80%b2%e5%a3%ab&SortType=1&SearchAdvanced=False&Language=1028"
-                            target="_blank" aria-label="蔡廷蘭進士第(另開視窗)">
+                            target="_blank" aria-label="蔡廷蘭進士第(新しいウィンドウで開く)">
                             <div class="pic">
-                                <img src="./images/spot12.png" alt="蔡廷蘭進士第圖片" />
+                                <img src="./images/spot12.png" alt="蔡廷蘭進士第の画像" />
                             </div>
                             <div class="text">
                                 <div class="spotname">
@@ -2112,29 +2116,29 @@
                                 <div class="info">
                                     <div class="icon"><img src="./images/icon-spot.svg" alt="" /></div>
                                     <div class="detail">
-                                        <p class="cn">距離此站：約800公尺</p>
+                                        <p class="cn">徒歩約800メートル</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/7wUH71QfhxvVLShM6" target="_blank"
-                        aria-label="googlemap澎湖遊客中心位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで澎湖ビジターセンターの場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
-                <div class="content odd" tabindex="-1" id="spot9" aria-label="澎湖機場站點資訊">
+                <div class="content odd" tabindex="-1" id="spot9" aria-label="澎湖空港">
                     <div class="num">
                         <p>9</p>
                     </div>
                     <div class="bus">
                         <div class="icon"><img src="./images/icon-bus-og.svg" alt="" /></div>
                     </div>
-                    <div class="name">澎湖機場</div>
+                    <div class="name">澎湖空港</div>
                     <a class="location" tabindex="0" href="https://maps.app.goo.gl/LdJ1SzkHS8FtYjSa7" target="_blank"
-                        aria-label="googlemap澎湖機場位置（另開視窗）">
-                        <p>站點位置</p>
+                        aria-label="Googleマップで澎湖空港の場所（新しいウィンドウで開く）">
+                        <p>停留所の場所</p>
                         <div class="icon"><img src="./images/icon-link.svg" alt="" /></div>
                     </a>
                 </div>
@@ -2142,17 +2146,20 @@
         </section>
 
         <!-- 回到頂端 -->
-        <div class="backtop">
-            <a class="gotop" href="javascript:;" aria-label="回到頁面頂端"></a>
-        </div>
+<div class="backtop">
+    <a class="gotop" href="javascript:;" aria-label="ページの先頭へ戻る"></a>
+</div>
         <!-- footer -->
-        <footer class="footer" role="contentinfo" aria-label="網站頁尾">
-            <div class="container">
-                <div class="copyright">
-                    <p>交通部觀光署 澎湖國家風景區管理處 版權所有</p>
-                </div>
-            </div>
-        </footer>
+<footer class="footer" role="contentinfo" aria-label="サイトのフッター">
+    <div id="tabB" class="skip-link-wrap">
+<a href="#site-footer" title="フッターへスキップ" accesskey="B" class="skip-link">フッターへスキップ</a>
+</div>
+    <div class="container">
+        <div class="copyright">
+            <p>交通部観光署 澎湖国家風景区管理処 All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
