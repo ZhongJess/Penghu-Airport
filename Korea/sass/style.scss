@@ -1,0 +1,17 @@
+// style.scss
+@import '/sass/_Bootstrap/variables';
+@import 'mixins';
+@import 'header';
+@import 'animate';
+@import 'layout';
+
+
+.header .nav ul {
+    display: flex;
+    gap: 4%;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
