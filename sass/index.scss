@@ -2309,7 +2309,7 @@ section.ebus .busform .station .row .on .num::before {
 @media (max-width: 980px) {
   .lang-switch {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin: 1rem;
   }
@@ -2324,6 +2324,7 @@ section.ebus .busform .station .row .on .num::before {
     cursor: pointer;
     margin-left: 6px;
     transition: background 0.2s;
+    width: 85px;
 }
 .lang-switch button:hover {
     background: #c85027;

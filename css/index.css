@@ -310,8 +310,7 @@ section.ebus .busform .timetable {
 }
 
 section.ebus .busform .timetable .pic {
-  max-width: 490px;
-  width: 48%;
+  width: 100%;
 }
 
 @media screen and (max-width: 980px) {
@@ -416,6 +415,7 @@ section.ebus .busform .return .row1 .bus {
   justify-content: space-between;
   gap: 10px;
   position: relative;
+  height: auto;
 }
 
 section.ebus .busform .return .row2 .bus {
@@ -854,7 +854,7 @@ section.route .route_map .row2::after {
   background-size: cover;
   width: 100%;
   padding-bottom: 10.8%;
-  bottom: 64.5%;
+  bottom: 73.5%;
   left: 0;
   z-index: -1;
 }
@@ -1461,7 +1461,7 @@ section.spot .content .cards .card:hover .pic::before {
 }
 
 section.spot .content .location {
-  max-width: 150px;
+  max-width: 190px;
   margin-top: 60px;
   background-color: #c85027;
   border-radius: 0 10px 0 10px;
@@ -1857,16 +1857,12 @@ section.spot .odd .num {
     width: 100%;
   }
 }
-@media screen and (max-width: 380px) {
-  p.innerp.orange.mb-2 {
-    height: 105px;
-    padding-bottom: 15px;
-    border-bottom: #db3b06 2px dashed;
-  }
-  .ticket {
-    height: 96px;
-  }
+p.innerp.orange.mb-2 {
+  height: 48px;
+  padding-bottom: 15px;
+  border-bottom: #db3b06 2px dashed;
 }
+
 .lightbox .close_btn {
   position: absolute;
   top: 10px;
@@ -2157,7 +2153,7 @@ section.ebus .busform .station .row .on .num::before {
 @media (max-width: 980px) {
   .lang-switch {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin: 1rem;
   }
@@ -2171,6 +2167,7 @@ section.ebus .busform .station .row .on .num::before {
     cursor: pointer;
     margin-left: 6px;
     transition: background 0.2s;
+    width: 85px;
   }
   .lang-switch button:hover {
     background: #c85027;
@@ -2244,9 +2241,45 @@ p.innerp.orange.mb-2 {
   }
 }
 .ticket {
-  min-height: 48px;
+  height: 96px;
 }
 
+.orange {
+  color: #db3b06;
+  font-size: 20px;
+  height: 150px;
+}
+
+@media screen and (max-width: 980px) {
+  .orange {
+    color: #db3b06;
+    font-size: 20px;
+    height: auto;
+  }
+  .ticket {
+    height: 48px;
+  }
+  p.innerp.orange.mb-2 {
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: #db3b06 2px dashed;
+  }
+}
+@media screen and (max-width: 380px) {
+  .orange {
+    color: #db3b06;
+    font-size: 20px;
+    height: auto;
+  }
+  p.innerp.orange.mb-2 {
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: #db3b06 2px dashed;
+  }
+  .ticket {
+    height: 48px;
+  }
+}
 a:focus, button:focus, input:focus, [tabindex]:focus {
   outline: 2px solid #1976d2; /* 自訂顏色 */
   outline-offset: 2px;
