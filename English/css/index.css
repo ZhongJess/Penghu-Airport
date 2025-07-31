@@ -310,7 +310,8 @@ section.ebus .busform .timetable {
 }
 
 section.ebus .busform .timetable .pic {
-  width: 100%;
+  max-width: 490px;
+  width: 48%;
 }
 
 @media screen and (max-width: 980px) {
@@ -329,7 +330,7 @@ section.ebus .busform .box {
 
 section.ebus .busform .instruct {
   background-color: #6d865f;
-  width: 200px;
+  width: 300px;
   margin: auto 0 auto;
   padding: 10px;
   border-radius: 0 20px 0 0;
@@ -2149,7 +2150,7 @@ section.ebus .busform .station .row .on .num::before {
 @media (max-width: 980px) {
   .lang-switch {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin: 1rem;
   }
@@ -2163,6 +2164,7 @@ section.ebus .busform .station .row .on .num::before {
     cursor: pointer;
     margin-left: 6px;
     transition: background 0.2s;
+    width: 85px;
   }
   .lang-switch button:hover {
     background: #c85027;
@@ -2188,7 +2190,7 @@ section.transport .content .row .col-4 {
 }
 
 p.innerp.orange.mb-2 {
-  min-height: 87px;
+  height: 100px;
   padding-bottom: 15px;
   border-bottom: #db3b06 2px dashed;
 }
@@ -2236,7 +2238,7 @@ p.innerp.orange.mb-2 {
   }
 }
 .ticket {
-  height: 96px;
+  height: 120px;
 }
 
 @media screen and (max-width: 980px) {
@@ -2246,7 +2248,7 @@ p.innerp.orange.mb-2 {
     height: auto;
   }
   .ticket {
-    height: auto;
+    height: 48px;
   }
   p.innerp.orange.mb-2 {
     height: auto;
@@ -2266,7 +2268,7 @@ p.innerp.orange.mb-2 {
     border-bottom: #db3b06 2px dashed;
   }
   .ticket {
-    height: 48px;
+    height: 65px;
   }
 }
 a:focus, button:focus, input:focus, [tabindex]:focus {
@@ -2427,5 +2429,19 @@ a:focus, a:focus-visible {
     margin-top: 30px;
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+.w270 {
+  height: 270px;
+}
+
+@media screen and (max-width: 980px) {
+  .w270 {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .w270 {
+    height: 150px;
   }
 }/*# sourceMappingURL=index.css.map */
