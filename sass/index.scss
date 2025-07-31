@@ -1793,11 +1793,14 @@ section.spot .odd .num {
         width: 95%;
     }
     section.transport .content .row {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 1%;
     }
+
+
     section.transport .content .row .box {
         border-radius: 0 20px 0 20px;
-        width: 97%;
+        width: 47%;
     }
     section.transport .content .row .box .title .pic {
         max-width: 20px;
@@ -1959,13 +1962,24 @@ section.spot .odd .num {
 
 @media screen and (max-width: 380px) {
    p.innerp.orange.mb-2 {
-    height: 105px;
+    height: 40px;
     padding-bottom: 15px;
     border-bottom: #db3b06 2px dashed;
+    
 }
 
+ section.transport .content .row .box {
+        border-radius: 0 20px 0 20px;
+        width: 94%;
+    }
+
+    .header .row .right {
+        width: 100%;
+    }
+
+
 .ticket {
-    height: 96px;
+    height: 48px;
 }
 
     }
@@ -2401,12 +2415,13 @@ p.innerp.orange.mb-2 {
 @media screen and (max-width: 400px) {
     section.transport .content .row {
         flex-direction: column;
-        padding: 0 20px;
+        display: flex;
+        align-items: center;
     }
 
     section.transport .content .row .col-4 {
     position: relative;
-    width: 100%;
+    width: 94%;
     background-color: #fff;
     padding-left: 24px;
     padding-right: 24px;

@@ -310,7 +310,8 @@ section.ebus .busform .timetable {
 }
 
 section.ebus .busform .timetable .pic {
-  width: 100%;
+  max-width: 490px;
+  width: 48%;
 }
 
 @media screen and (max-width: 980px) {
@@ -415,7 +416,6 @@ section.ebus .busform .return .row1 .bus {
   justify-content: space-between;
   gap: 10px;
   position: relative;
-  height: auto;
 }
 
 section.ebus .busform .return .row2 .bus {
@@ -854,7 +854,7 @@ section.route .route_map .row2::after {
   background-size: cover;
   width: 100%;
   padding-bottom: 10.8%;
-  bottom: 73.5%;
+  bottom: 64.5%;
   left: 0;
   z-index: -1;
 }
@@ -1461,7 +1461,7 @@ section.spot .content .cards .card:hover .pic::before {
 }
 
 section.spot .content .location {
-  max-width: 190px;
+  max-width: 150px;
   margin-top: 60px;
   background-color: #c85027;
   border-radius: 0 10px 0 10px;
@@ -1702,11 +1702,12 @@ section.spot .odd .num {
     width: 95%;
   }
   section.transport .content .row {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1%;
   }
   section.transport .content .row .box {
     border-radius: 0 20px 0 20px;
-    width: 97%;
+    width: 47%;
   }
   section.transport .content .row .box .title .pic {
     max-width: 20px;
@@ -1857,12 +1858,23 @@ section.spot .odd .num {
     width: 100%;
   }
 }
-p.innerp.orange.mb-2 {
-  height: 48px;
-  padding-bottom: 15px;
-  border-bottom: #db3b06 2px dashed;
+@media screen and (max-width: 380px) {
+  p.innerp.orange.mb-2 {
+    height: 40px;
+    padding-bottom: 15px;
+    border-bottom: #db3b06 2px dashed;
+  }
+  section.transport .content .row .box {
+    border-radius: 0 20px 0 20px;
+    width: 94%;
+  }
+  .header .row .right {
+    width: 100%;
+  }
+  .ticket {
+    height: 48px;
+  }
 }
-
 .lightbox .close_btn {
   position: absolute;
   top: 10px;
@@ -2224,11 +2236,12 @@ p.innerp.orange.mb-2 {
 @media screen and (max-width: 400px) {
   section.transport .content .row {
     flex-direction: column;
-    padding: 0 20px;
+    display: flex;
+    align-items: center;
   }
   section.transport .content .row .col-4 {
     position: relative;
-    width: 100%;
+    width: 94%;
     background-color: #fff;
     padding-left: 24px;
     padding-right: 24px;
@@ -2241,45 +2254,9 @@ p.innerp.orange.mb-2 {
   }
 }
 .ticket {
-  height: 96px;
+  min-height: 48px;
 }
 
-.orange {
-  color: #db3b06;
-  font-size: 20px;
-  height: 150px;
-}
-
-@media screen and (max-width: 980px) {
-  .orange {
-    color: #db3b06;
-    font-size: 20px;
-    height: auto;
-  }
-  .ticket {
-    height: 48px;
-  }
-  p.innerp.orange.mb-2 {
-    height: auto;
-    padding-bottom: 15px;
-    border-bottom: #db3b06 2px dashed;
-  }
-}
-@media screen and (max-width: 380px) {
-  .orange {
-    color: #db3b06;
-    font-size: 20px;
-    height: auto;
-  }
-  p.innerp.orange.mb-2 {
-    height: auto;
-    padding-bottom: 15px;
-    border-bottom: #db3b06 2px dashed;
-  }
-  .ticket {
-    height: 48px;
-  }
-}
 a:focus, button:focus, input:focus, [tabindex]:focus {
   outline: 2px solid #1976d2; /* 自訂顏色 */
   outline-offset: 2px;

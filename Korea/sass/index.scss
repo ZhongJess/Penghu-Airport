@@ -1803,7 +1803,7 @@ section.spot .odd .num {
     }
     section.transport .content .row .box {
         border-radius: 0 20px 0 20px;
-        width: 97%;
+        width: 47%;
     }
     section.transport .content .row .box .title .pic {
         max-width: 20px;
@@ -2397,18 +2397,21 @@ p.innerp.orange.mb-2 {
 
 
 
-
-
-
 @media screen and (max-width: 400px) {
     section.transport .content .row {
         flex-direction: column;
-        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+        section.transport .content .row .box {
+        border-radius: 0 20px 0 20px;
+        width: 94%;
     }
 
     section.transport .content .row .col-4 {
     position: relative;
-    width: 100%;
+    width: 94%;
     background-color: #fff;
     padding-left: 24px;
     padding-right: 24px;
@@ -2432,8 +2435,13 @@ p.innerp.orange.mb-2 {
 .orange {
     color: #db3b06;
     font-size: 20px;
+}
+
+
+.w150 {
     height: 150px;
 }
+
 
 @media screen and (max-width: 980px) {
 

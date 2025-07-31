@@ -2403,12 +2403,20 @@ p.innerp.orange.mb-2 {
 @media screen and (max-width: 400px) {
     section.transport .content .row {
         flex-direction: column;
-        padding: 0 20px;
+        display: flex;
+        align-items: center;
+
     }
+
+    section.transport .content .row .box {
+        border-radius: 0 20px 0 20px;
+        width: 94%;
+    }
+
 
     section.transport .content .row .col-4 {
     position: relative;
-    width: 100%;
+    width: 94%;
     background-color: #fff;
     padding-left: 24px;
     padding-right: 24px;
@@ -2472,7 +2480,35 @@ p.innerp.orange.mb-2 {
 
 
 
+    .header .row .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
 }
+
+@media screen and (max-width: 400px) {
+    section .transport .content .row  {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    section .transport .content .row .box {
+        width: 100%;
+
+    }
+    
+}
+
+
+
+
+
 
 
 
