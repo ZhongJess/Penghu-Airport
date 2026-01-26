@@ -17,13 +17,7 @@
     <link rel="stylesheet" type="text/css" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./sass/style.scss" />
-
-
-
-
-
-
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -45,11 +39,12 @@
         <div id="skipMain">
             <a class="skip-main" href="#departure_station" title="跳到主要內容">跳到主要內容</a>
         </div>
+
         <header class="header" id="header" role="banner" aria-label="網站標頭">
             <a class="menuBtn" href="javascript:;" aria-label="主選單開關" >
                 <span></span>
-                <span></span>               
-                <span></span>   
+                <span></span>
+                <span></span>
             </a>
             <div class="row">
                 <div class="logo" aria-label="澎湖國家風景區管理處LOGO">
@@ -59,12 +54,8 @@
                     </a>
                 </div>
                 <div class="right">
-                    <div id="tabU" class="skip-link-wrap">
-                    <a href="#site-header" title="跳到導覽列" accesskey="U" class="skip-link">跳到導覽列</a>
-                    </div> 
-
-
-                <div class="lang" aria-label="相關連結">
+                <div class="lang"  aria-label="相關連結">
+                        <a id="tabU" href="#" title="上方導覽連結區" accesskey="U" class="skip-link">:::</a>
                         <a href="https://www.penghu-nsa.gov.tw/" target="_blank" aria-label="澎湖國家風景管理處首頁（另開視窗）">首頁</a>
                         <a href="https://www.penghu-nsa.gov.tw/Info/Sitemap.htm#" target="_blank"
                             aria-label="網站導覽（另開視窗）">網站導覽</a>
@@ -82,12 +73,12 @@
                             aria-label="首長信箱（另開視窗）">首長信箱</a>
 
                         <nav id="nav_lang" class="nav_lang_wrap" aria-label="切換語言">
-                            <a class="nav_lang_parent tc_nav_parent" href="#" title="語言版本" role="button"
+                            <a class="nav_lang_parent tc_nav_parent"  href="#" title="語言版本" role="button"
                                 aria-haspopup="true" aria-expanded="false">語言版本</a>
                             <ul class="nav_lang tc_nav_lang" aria-label="語言清單">
-                                <li><a href="#" title="English" lang="en">English</a></li>
-                                <li><a href="#" title="日本語" lang="ja">日本語</a></li>
-                                <li><a href="#" title="한국어" lang="kr">한국어</a></li>
+                                <li><a href="English/index.html" title="English" lang="en">English</a></li>
+                                <li><a href="Japanese/index.html" title="日本語" lang="ja">日本語</a></li>
+                                <li><a href="Korean/index.html" title="한국어" lang="kr">한국어</a></li>
                             </ul>
                         </nav>
 
@@ -1158,9 +1149,7 @@
                         </div>
                     </div>
                     <div class="station" id="departure_station" aria-label="去程站點列表">
-<div id="tabC" class="skip-link-wrap">
-<a href="#main-content" title="跳至主要內容" accesskey="C" class="skip-link">跳至主要內容</a>
-</div>
+                        <a href="#tabC" title="跳至主要內容" accesskey="C" class="skip-link">:::</a>
                         <div class="row row1">
                             <div class="bus" title="馬公港站 尚未發車">
                                 <div class="num" aria-label="站點編號 1">
@@ -2157,9 +2146,7 @@
         </div>
         <!-- footer -->
         <footer class="footer" role="contentinfo" aria-label="網站頁尾">
-<div id="tabB" class="skip-link-wrap">
-<a href="#site-footer" title="跳至頁尾" accesskey="B" class="skip-link">跳至頁尾</a>
-</div>
+            <a href="#tabB" title="跳至頁尾" accesskey="B" class="skip-link">:::</a>
             <div class="container">
                 <div class="copyright">
                     <p>交通部觀光署 澎湖國家風景區管理處 版權所有</p>
@@ -2248,14 +2235,21 @@
             animate();
         }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('tabU');
+  if (el) {
+    el.addEventListener('focus', () => {
+      // 第一次聚焦時就自動滾回頂部
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});
+
+
+
         window.addEventListener('DOMContentLoaded', animateSVG);
     </script>
 
 </body>
 
 </html>
-
-
-
-
-<!-- 英日韓 -->

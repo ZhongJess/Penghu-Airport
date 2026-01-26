@@ -1,0 +1,12 @@
+# 忽略 Node.js 依賴套件 (最重要！這能解決你看到的幾千個綠色 U)
+node_modules/
+
+# 忽略 Mac 系統產生的垃圾檔
+.DS_Store
+
+
+# 忽略公司原本的 GitLab 設定檔
+.gitlab-ci.yml
+
+# 忽略 VS Code 的個人設定（如果你不想把自己的編輯器偏好傳上去）
+.vscode/
