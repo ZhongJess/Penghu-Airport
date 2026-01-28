@@ -1,0 +1,424 @@
+// Route Section Styles
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+
+section.route {
+    padding-bottom: 250px;
+    position: relative;
+}
+
+section.route::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/info_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 4%;
+    bottom: -1px;
+    left: 0;
+}
+
+section.route .title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.route .title .pic {
+    position: relative;
+    z-index: 4;
+    max-width: 80px;
+    transform: translateY(-100px) rotate(-15deg);
+}
+
+section.route .title h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    line-height: 1;
+}
+
+section.route .subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+section.route .info {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+section.route .info p {
+    font-family: "Microsoft JhengHei";
+    font-size: 18px;
+    line-height: 1.67;
+    color: #000;
+}
+
+section.route .route_map {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+section.route .route_map .row {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+section.route .route_map .row2 {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+section.route .route_map .row2::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/greenline.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 10.8%;
+    bottom: 64.5%;
+    left: 0;
+    z-index: -1;
+}
+
+section.route .route_map .station {
+    margin-top: 30px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+}
+
+section.route .route_map .station p {
+    font-family: "Microsoft JhengHei";
+    font-size: 24px;
+    font-weight: bold;
+    color: var.$dark-green;
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.1;
+    transition: 0.25s linear;
+}
+
+section.route .route_map .station span {
+    line-height: 1.1;
+    max-width: 200px;
+    font-family: "Microsoft JhengHei";
+    font-size: 12px;
+    font-weight: bold;
+    color: var.$dark-green;
+    text-align: center;
+    transition: 0.25s linear;
+}
+
+section.route .route_map .station .pic {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var.$dark-green;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: 0.25s linear;
+
+    transition: transform 0.3s ease;
+    will-change: transform;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+section.route .route_map .station .pic img {
+    max-width: 24px;
+}
+
+section.route .route_map .map {
+    margin-top: 75px;
+}
+
+.stop1 {
+      flex: 0 0 8%;  // 固定寬度 8%，比其他小
+}
+
+section.route .route_map .mainStation p {
+    font-family: "Microsoft JhengHei";
+    font-size: 24px;
+    font-weight: bold;
+    color: var.$primary-color;
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.1;
+    transition: 0.25s linear;
+}
+
+section.route .route_map .mainStation span {
+    line-height: 1.1;
+    max-width: 200px;
+    font-family: "Microsoft JhengHei";
+    font-size: 12px;
+    font-weight: bold;
+    color: var.$primary-color;
+    text-align: center;
+    transition: 0.25s linear;
+}
+
+.mainStation .icon {
+    background-color: var.$primary-color;
+    color: #ffffff;
+    border: 2px solid #e29837;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s linear;
+    display: flex;
+
+    transition: transform 0.3s ease;
+    will-change: transform;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.mainStation .icon img {
+  max-height: 20px;
+  display: block;
+}
+
+.point span + span {
+  margin-left: 10px;
+}
+
+.route .title h2 {
+    margin-bottom: 55px;
+}
+
+@include mix.respond-to(small) {
+    section.route {
+        padding-bottom: 10vw;
+    }
+    section.route .title .pic {
+        max-width: 50px;
+        transform: translateY(-50px) rotate(-15deg);
+    }
+    section.route .route_map .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.route .route_map .row .station {
+        width: 100%;
+        margin-top: 50px;
+    }
+    section.route .route_map .row .station::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        top: 103%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #6d865f;
+    }
+    section.route .route_map .row2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    section.route .route_map .row2 .station {
+        width: 100%;
+        margin-top: 50px;
+    }
+    section.route .route_map .row2 .station .pic {
+        order: 1;
+    }
+    section.route .route_map .row2 .station:first-child::after {
+        display: none;
+    }
+    section.route .route_map .row2 .station4 {
+        order: 4;
+    }
+    section.route .route_map .row2 .station3 {
+        order: 3;
+    }
+    section.route .route_map .row2 .station2 {
+        order: 2;
+    }
+    section.route .route_map .row2 .station1 {
+        order: 1;
+    }
+    section.route .route_map .row2::after {
+        display: none;
+    }
+}
+
+
+
+
+
+
+section.route {
+  padding-bottom: 250px;
+  position: relative;
+}
+
+section.route::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/info_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 4%;
+  bottom: -1px;
+  left: 0;
+}
+
+section.route .title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.route .title .pic {
+  position: relative;
+  z-index: 4;
+  max-width: 80px;
+  transform: translateY(-100px) rotate(-15deg);
+}
+
+section.route .title h2 {
+  font-size: clamp(40px, 4vw, 60px);
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  line-height: 1;
+}
+
+section.route .subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+section.route .info {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section.route .info p {
+  font-family: "Microsoft JhengHei";
+  font-size: 18px;
+  line-height: 1.67;
+  color: #000;
+}
+
+section.route .route_map {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section.route .route_map .row {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+section.route .route_map .row2 {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+section.route .route_map .row2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/greenline.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 10.8%;
+  bottom: 64.5%;
+  left: 0;
+  z-index: -1;
+}
+
+section.route .route_map .station {
+  margin-top: 30px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+
+section.route .route_map .station p {
+  font-family: "Microsoft JhengHei";
+  font-size: 24px;
+  font-weight: bold;
+  color: #6d865f;
+  max-width: 200px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 0.25s linear;
+}
+
+section.route .route_map .station span {
+  line-height: 1.1;
+  max-width: 200px;
+  font-family: "Microsoft JhengHei";
+  font-size: 12px;
+  font-weight: bold;
+  color: #6d865f;
+  text-align: center;
+  transition: 0.25s linear;
+}
+
+section.route .route_map .station .pic {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #6d865f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: 0.25s linear;
+}
+
+section.route .route_map .station .pic img {
+  max-width: 24px;
+}
+
+section.route .route_map .map {
+  margin-top: 75px;
+}

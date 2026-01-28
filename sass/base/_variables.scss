@@ -1,0 +1,41 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Responsive breakpoints
+$breakpoint-tiny: 365px;
+$breakpoint-extra-small: 375px;
+$breakpoint-mobile: 375px;
+$breakpoint-small: 450px;
+$breakpoint-tablet: 768px;
+$breakpoint-medium: 980px;
+$breakpoint-medium-plus: 981px;
+$breakpoint-large: 1200px;
+$breakpoint-xl: 1280px;
+$breakpoint-desktop: 1920px;  // 電腦版斷點
+$breakpoint-max: 1920px;
+
+// Color system
+$primary-color: #db3b06;
+$secondary-color: #bbd269;
+$dark-green: #6d865f;
+$highlight-yellow: #ffeca1;
+$highlight-yellow-hover: #ffdb69;
+$link-blue: #0074d3;
+$text-color: #000;
+$white: #fff;
+$light-gray: #f5f5f5;
+
+// Typography
+$font-family-primary: "Microsoft JhengHei", sans-serif;
+$font-size-base: 16px;
+
+// Spacing
+$spacing-unit: 1rem;
+$container-max-width: 960px;
+
+// Z-index layers
+$z-header: 100;
+$z-banner: 2;
+$z-modal: 1000;

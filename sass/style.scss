@@ -1,0 +1,33 @@
+
+// ==========================================================================
+// Main SCSS File - 專案核心入口
+// ==========================================================================
+
+// 1. 引入工具 (Abstracts) - 這些檔案不會產生 CSS，只提供變數與 Mixins
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+@use '_Bootstrap/variables' as bs;
+
+// 2. 引入基礎樣式 (Base)
+@use 'base/reset';       
+@use 'base/animate';  
+
+// 3. 引入全域樣式庫 (Global)
+@use 'base/index'; 
+
+// 4. 引入佈局框架 (Layout)
+@use 'layout/container';
+@use 'layout/footer';
+
+
+// 5. 引入具體元件 (Components)
+@use 'components/header';
+@use 'components/banner';
+@use 'components/ebus';
+@use 'components/route';
+@use 'components/spot';
+@use 'components/transport';
+@use 'components/modal';
+
+
+@use 'base/accessibility'; // 無障礙樣式

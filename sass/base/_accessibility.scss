@@ -1,0 +1,76 @@
+// ==========================================================================
+// Accessibility (無障礙) 樣式
+// ==========================================================================
+@use 'variables' as var;
+
+// 跳轉連結樣式 (Skip Links)
+// .skip-link {
+//   position: absolute;
+//   top: -40px;
+//   left: 6px;
+//   background: var.$text-color;
+//   color: var.$white;
+//   padding: 8px;
+//   text-decoration: none;
+//   z-index: 1000;
+//   transition: top 0.3s;
+// }
+
+// .skip-link:focus {
+//   top: 6px;
+// }
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+// 聚焦樣式強化
+*:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+// 高對比模式支援
+@media (prefers-contrast: high) {
+  * {
+    border: 1px solid;
+  }
+}
+
+// 減少動畫偏好
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// 螢幕閱讀器專用內容
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

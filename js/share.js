@@ -19,43 +19,30 @@ $(document).ready(function() {
         $('.header').removeClass('click')
         $('.menuBtn').removeClass('closeBtn')
     }
-    $('.menuBtn').click(function(e) {
-        e.preventDefault()
-        // menuActive()
-        if (window.innerWidth <= 980) {
-            if (isOverflowHidden) {
-                document.body.style.overflow = 'auto' // 啟用捲動
-            } else {
-                document.body.style.overflow = 'hidden' // 禁用捲動
-            }
-
-            isOverflowHidden = !isOverflowHidden // 切換當前狀態
-        }
-    })
-
-    // 監聽視窗大小變化事件
-    window.addEventListener('resize', updateOverflow)
-
-    // 頁面加載時初始化 overflow 狀態
-    window.addEventListener('load', updateOverflow)
-    // const getFullVh = window.innerHeight
 
     $('.menuBtn').click(function(e) {
         e.preventDefault()
         $(this).toggleClass('closeBtn')
         $('.header').toggleClass('click')
-        $('.header nav a').toggleClass('click')
-
-        $('.gotop').removeClass('show')
-
-        if (!$(this).hasClass('closeBtn')) {
-            $('.drop_list').removeClass('click')
+        
+        // 處理 Body 捲動鎖定
+        if (window.innerWidth <= 980) {
+            isOverflowHidden = !isOverflowHidden
+            document.body.style.overflow = isOverflowHidden ? 'hidden' : 'auto'
         }
+        
+        $('.gotop').removeClass('show')
     })
+
+    // 監聽視窗大小變化事件
+    window.addEventListener('resize', updateOverflow)
+    
+    // 點擊選單連結後自動收合選單
     $('.header nav a').click(function(e) {
-        e.preventDefault()
-        $('.menuBtn').toggleClass('closeBtn')
-        $('.header').toggleClass('click')
+        // 不要阻止預設行為，否則錨點跳轉會失效
+        $('.menuBtn').removeClass('closeBtn')
+        $('.header').removeClass('click')
+        
         if (window.innerWidth <= 980) {
             if (isOverflowHidden) {
                 document.body.style.overflow = 'auto' // 啟用捲動
@@ -96,5 +83,3 @@ $(document).ready(function() {
     })
 
 })
-
-

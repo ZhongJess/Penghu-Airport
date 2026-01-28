@@ -1,0 +1,79 @@
+// Mixins and common styles
+@use 'variables';
+
+// Responsive breakpoints mixins
+@mixin mobile {
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: variables.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: variables.$breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: variables.$breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: variables.$breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: variables.$breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin extra-small {
+  @media screen and (max-width: variables.$breakpoint-extra-small) {
+    @content;
+  }
+}
+
+@mixin tiny {
+  @media screen and (max-width: variables.$breakpoint-tiny) {
+    @content;
+  }
+}
+
+// Advanced responsive mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @include mobile { @content; }
+  } @else if $breakpoint == tablet {
+    @include tablet { @content; }
+  } @else if $breakpoint == desktop {
+    @include desktop { @content; }
+  } @else if $breakpoint == large {
+    @include large { @content; }
+  } @else if $breakpoint == medium {
+    @include medium { @content; }
+  } @else if $breakpoint == small {
+    @include small { @content; }
+  } @else if $breakpoint == extra-small {
+    @include extra-small { @content; }
+  } @else if $breakpoint == tiny {
+    @include tiny { @content; }
+  }
+}
+
+// Utility mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

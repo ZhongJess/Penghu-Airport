@@ -1,0 +1,49 @@
+// Global styles and utilities 全站使用，無障礙按鈕樣式
+
+/* 有新景點只要新增同格式 class 與背景圖即可 */
+.scroll.scroll-arrow {
+  background-image: url("/images/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  /* 不設 cursor / :hover 樣式 */
+}
+
+button.btn.w-100.purchase-btn.mb-3 {
+  background-color: #d95220;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  outline: none; /* 預設移除 outline，之後 focus 狀態會自訂 */
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* 滑鼠 hover 效果 */
+button.btn.w-100.purchase-btn.mb-3:hover,
+button.btn.w-100.purchase-btn.mb-3:focus-visible {
+  background-color: #b84318; /* 深一點的橘色 */
+  color: #FFF;
+  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #d95220;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 鍵盤 focus (無障礙重點) */
+button.btn.w-100.purchase-btn.mb-3:focus-visible {
+  /* 可增加明顯的邊框或光暈 */
+  box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #7c370f;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+

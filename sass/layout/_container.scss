@@ -1,0 +1,58 @@
+// Layout - Container and Grid System
+@use '../base/mixins' as mix;
+@use '../base/variables' as var;
+
+.container {
+  width: 100%;
+  max-width: var.$container-max-width;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  // Desktop responsive adjustments
+  @include mix.desktop {
+    max-width: 1440px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  // Mobile responsive adjustments
+  @include mix.mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.project {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+.project * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var.$font-family-primary;
+}
+
+.project a {
+  color: var.$text-color;
+  text-decoration: none;
+}
+
+.project a:focus {
+  outline: none;
+}
+
+// Utility classes
+.forzen {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.none {
+  display: none !important;
+}

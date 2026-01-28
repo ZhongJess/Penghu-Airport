@@ -286,3 +286,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10);
   });
 });
+
+
+
+
+
+        function animateSVG() {
+            const boat = document.getElementById('_boat_');
+            const bus = document.getElementById('_bus_');
+            const airplain = document.getElementById('_airplain_');
+
+            // 初始位置
+            let boatX, busX, airplainY;
+
+            function resetPositions() {
+                boatX = -300;    // 船從左側外面
+                busX = 300;      // 公車從右側外面
+                airplainY = 200; // 飛機從下方外面
+                // 立即設定初始位置
+                boat.setAttribute('transform', `translate(${boatX}, 0)`);
+                bus.setAttribute('transform', `translate(${busX}, 0)`);
+                airplain.setAttribute('transform', `translate(0, ${airplainY})`);
+            }
+
+            function animate() {
+                let moving = false;
+
+                if (boatX < 0) {
+                    boatX += 0.8;
+                    boat.setAttribute('transform', `translate(${boatX}, 0)`);
+                    moving = true;
+                }
+
+                if (busX > 0) {
+                    busX -= 0.8;
+                    bus.setAttribute('transform', `translate(${busX}, 0)`);
+                    moving = true;
+                }
+
+                if (airplainY > 0) {
+                    airplainY -= 1;
+                    airplain.setAttribute('transform', `translate(0, ${airplainY})`);
+                    moving = true;
+                }
+
+                if (moving) {
+                    requestAnimationFrame(animate);
+                } else {
+                    // 動畫結束，重設位置並重新開始
+                    setTimeout(() => {
+                        resetPositions();
+                        requestAnimationFrame(animate);
+                    }, 500); // 停留0.5秒再重播，可自行調整
+                }
+            }
+
+            resetPositions();
+            animate();
+        }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('tabU');
+  if (el) {
+    el.addEventListener('focus', () => {
+      // 第一次聚焦時就自動滾回頂部
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});
+
+
+
+        window.addEventListener('DOMContentLoaded', animateSVG);

@@ -1,0 +1,268 @@
+// Banner Section Styles
+@use '../base/mixins' as mix;
+
+section.banner {
+    z-index: 2;
+    position: relative;
+    margin-top: 140px;
+    background-color: #f9f9f9;
+}
+
+@include mix.respond-to(large) {
+    section.banner {
+        margin-top: 127px;
+    }
+}
+
+@include mix.respond-to(medium) {
+    section.banner {
+        margin-top: 123px;
+    }
+}
+
+section.banner .bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 70%; // 你要的高度
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+
+}
+
+section.banner .bg svg {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+
+}
+
+section.banner .slogan {
+    width: 27%;
+    padding-bottom: 12%;
+    position: absolute;
+    top: 16%;
+    left: 24%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: swing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+section.banner .key {
+    width: 27.2%;
+    padding-bottom: 26%;
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.banner .airplane {
+    width: 15.5%;
+    padding-bottom: 9%;
+    position: absolute;
+    top: 16%;
+    right: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.banner .scroll {
+    width: 50px;
+    height: 52px;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@include mix.respond-to(small) {
+    section.banner {
+        margin-top: 50px;
+        padding-bottom: 12%;
+    }
+    section.banner .bg {
+        padding-bottom: 1%;
+    }
+    section.banner .slogan {
+        width: 66%;
+        padding-bottom: 29%;
+        top: 4.5%;
+        left: 3%;
+    }
+    section.banner .key {
+        width: 80.2%;
+        padding-bottom: 76%;
+        top: 33%;
+        right: 52%;
+        transform: translateX(46%);
+    }
+    section.banner .airplane {
+        width: 35%;
+        padding-bottom: 20%;
+        top: 20%;
+        right: 2%;
+    }
+    section.banner .scroll {
+        width: 50px;
+        height: 52px;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: scroll;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: scroll-mobile; // 使用手機版專用動畫名稱
+    }
+}
+
+// 將 Keyframes 統一放在外層，避免媒體查詢內的語法錯誤
+@keyframes scroll-mobile {
+    to {
+        top: 85%;
+    }
+    from {
+        top: 88%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.banner {
+  z-index: 2;
+  position: relative;
+  margin-top: 140px;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 1680px) {
+  section.banner {
+    margin-top: 127px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.banner {
+    margin-top: 123px;
+  }
+}
+section.banner .bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+
+section.banner .bg svg {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+section.banner .slogan {
+  width: 27%;
+  padding-bottom: 12%;
+  position: absolute;
+  top: 16%;
+  left: 24%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: swing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+section.banner .key {
+  width: 27.2%;
+  padding-bottom: 26%;
+  position: absolute;
+  top: 10%;
+  right: 18%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.banner .airplane {
+  width: 15.5%;
+  padding-bottom: 9%;
+  position: absolute;
+  top: 16%;
+  right: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.banner .scroll {
+  width: 50px;
+  height: 52px;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translate3d(125%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes scroll {
+  to {
+    top: 92%;
+  }
+  from {
+    top: 94%;
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
