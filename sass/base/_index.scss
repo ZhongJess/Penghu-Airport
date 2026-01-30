@@ -16,6 +16,7 @@ button.btn.w-100.purchase-btn.mb-3 {
   color: #FFF;
   font-size: 20px;
   font-weight: 400;
+  margin-top: auto;
   outline: none; /* 預設移除 outline，之後 focus 狀態會自訂 */
   transition: background-color 0.2s, box-shadow 0.2s;
 }
@@ -36,14 +37,3 @@ button.btn.w-100.purchase-btn.mb-3:focus-visible {
   box-shadow: 0 0 0 3px #ffe2d6, 0 0 0 6px #7c370f;
   outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-

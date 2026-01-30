@@ -5,21 +5,9 @@
 section.spot {
     position: relative;
     background-color: var.$light-gray;
-    padding-bottom: 7vw;
+    padding-bottom: 2vw;
 }
 
-section.spot::after {
-    content: "";
-    position: absolute;
-    background-image: url(../images/spot_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-bottom: 6%;
-    bottom: 0;
-    left: 0;
-    background-position: bottom center;
-}
 
 section.spot>.title {
     position: relative;
@@ -41,7 +29,7 @@ section.spot>.title h2 {
     font-size: clamp(40px, 4vw, 60px);
     font-weight: bold;
     text-align: center;
-    color: var.$text-color;
+    color: var.$text-color; // 修正變數名
     line-height: 1;
 }
 
@@ -49,27 +37,27 @@ section.spot .subtitle {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    color: var.$text-color;
+    color: var.$body-color;
     transform: translateY(-130px);
 }
 
 section.spot .content {
+    position: relative;
     max-width: 960px;
-    transform: translateY(-100px);
     width: 90%;
     margin: 0 auto;
+    padding-left: 40px;
+    border-left: 2px solid var.$spot-blue;
+    transform: translateY(-50px);
 }
 
 section.spot .content .row {
-    display: flex;
-    gap: 2%;
-    justify-content: space-evenly;
+    // 移除佈局屬性
 }
 
 section.spot .content .row .box {
     position: relative;
-    width: 47%;
-    background-color: var.$white;
+    background-color: var.$white; 
     padding-left: 24px;
     padding-right: 24px;
     min-height: 230px;
@@ -87,7 +75,7 @@ section.spot .content .row .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: var.$primary-color;
+    background-color: var.$primary; // 修正變數名
     padding: 5px 15px;
 }
 
@@ -97,24 +85,24 @@ section.spot .content .row .box .title .pic {
 }
 
 section.spot .content .row .box .title p {
-    font-family: var.$font-family-primary;
+    font-family: var.$font-primary;
     font-size: 24px;
     font-weight: bold;
     color: var.$white;
 }
 
 section.spot .content .row .box .title span {
-    font-family: var.$font-family-primary;
+    font-family: var.$font-primary;
     font-size: 18px;
     font-weight: bold;
     color: var.$white;
 }
 
 section.spot .content .row .box .inner .main {
-    font-family: var.$font-family-primary;
+    font-family: var.$font-primary;
     font-size: 20px;
     font-weight: bold;
-    color: var.$text-color;
+    color: var.$body-color;
     letter-spacing: 1.5px;
 }
 
@@ -141,7 +129,7 @@ section.spot .content .row .box .inner .point {
 section.spot .content .row .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: var.$primary-color;
+    background-color: var.$primary;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -149,9 +137,7 @@ section.spot .content .row .box .inner .point::after {
     left: 0;
 }
 
-section.spot .content .row .hotline .main {
-    padding-left: 10px;
-}
+
 
 section.spot .content .box {
     margin-top: 25px;
@@ -175,7 +161,7 @@ section.spot .content .box .title {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-color: var.$primary-color;
+    background-color: var.$primary;
     border-radius: 0 0 10px 0;
     padding: 5px 15px;
 }
@@ -203,7 +189,7 @@ section.spot .content .box .inner .main {
     font-family: var.$font-family-primary;
     font-size: 20px;
     font-weight: bold;
-    color: var.$text-color;
+    color: var.$body-color;
 }
 
 section.spot .content .box .inner .main span {
@@ -245,7 +231,7 @@ section.spot .content .box .inner .links p {
 section.spot .content .box .inner .links p::after {
     content: "";
     position: absolute;
-    background-color: var.$primary-color;
+    background-color: var.$primary;
     width: 100%;
     height: 2px;
     bottom: -2px;
@@ -293,7 +279,7 @@ section.spot .content .box .inner .point p {
 section.spot .content .box .inner .point::after {
     content: "";
     position: absolute;
-    background-color: var.$primary-color;
+    background-color: var.$primary;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -305,7 +291,7 @@ section.spot .content .box .inner .point span.bold {
     font-family: var.$font-family-primary;
     font-size: 24px;
     line-height: 1.6;
-    color: var.$text-color;
+    color: var.$body-color;
     font-weight: bold;
 }
 
@@ -336,15 +322,7 @@ section.spot .content .transportation .inner .point::after {
     }
 }
 
-.orange {
-    color: var.$primary-color;
-}
 
-p.innerp.orange.mb-2 {
-    min-height: 87px;
-    padding-bottom: 15px;
-    border-bottom: var.$primary-color 2px dashed;
-}
 
 section.spot .content .row .col-4 {
     position: relative;
@@ -378,102 +356,59 @@ section.spot .content .row .col-4 {
     section.spot .content {
         transform: translateY(0px);
         width: 95%;
-    }
-    section.spot .content .row {
-        flex-direction: row;
-        gap: 1%;
+        
+        section.spot .content .row .box {
+            border-radius: 0 20px 0 20px;
+            // 移除 width: 47%
+            
+            .title {
+                    .pic { max-width: 20px; }
+                    p { font-size: 18px; }
+                    span { font-size: 16px; }
+                }
+            }
+        }
+
+        .box {
+            border-radius: 0 20px 0 20px;
+
+            .title {
+                .pic { max-width: 20px; }
+                p { font-size: 18px; }
+                span { font-size: 16px; }
+            }
+
+            .inner .point {
+                font-size: 18px;
+                p { font-size: 18px; }
+                span.bold { font-size: 24px; }
+            }
+
+            .inner .links p {
+                text-decoration: underline;
+                text-decoration-color: var.$primary-color;
+                text-underline-offset: 5px;
+                &::after { display: none; }
+            }
+        }
     }
 
-    section.spot .content .row .box {
-        border-radius: 0 20px 0 20px;
-        width: 47%;
-    }
-    section.spot .content .row .box .title .pic {
-        max-width: 20px;
-    }
-    section.spot .content .row .box .title p {
-        font-size: 18px;
-    }
-    section.spot .content .row .box .title span {
-        font-size: 16px;
-    }
-    section.spot .content .box {
-        border-radius: 0 20px 0 20px;
-    }
-    section.spot .content .box .title .pic {
-        max-width: 20px;
-    }
-    section.spot .content .box .title p {
-        font-size: 18px;
-    }
-    section.spot .content .box .title span {
-        font-size: 16px;
-    }
-    section.spot .content .box .inner .point {
-        font-size: 18px;
-    }
-    section.spot .content .box .inner .point span.bold {
-        font-size: 24px;
-    }
-    section.spot .content .box .inner .point p {
-        font-size: 18px;
-    }
-    section.spot .content .box .inner .links p {
-        text-decoration: underline;
-        text-decoration-color: var.$primary-color;
-        text-underline-offset: 5px;
-    }
-}
-
-@include mix.respond-to(small-450) {
-    section.spot .content .box .inner .links p {
-        width: 88%;
-    }
-}
-
-@include mix.respond-to(small) {
-    section.spot .content .box .inner .links p::after {
-        display: none;
-    }
-}
-
-@include mix.respond-to(small) {
-    section.spot .content .row {
-        flex-direction: row;
+    p.innerp.orange.mb-2 {
+        min-height: 0px;
     }
 
-    section.spot .content .row .col-4 {
-    position: relative;
-    width: 47%;
-    background-color: var.$white;
-    padding-left: 24px;
-    padding-right: 24px;
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    border-radius: 0 30px 0 30px;
-    padding-top: 58px;
-    padding-bottom: 25px;
-}
-
-p.innerp.orange.mb-2 {
-    min-height: 0px;
-    padding-bottom: 15px;
-    border-bottom: var.$primary-color 2px dashed;
-}
-
-}
-
-@include mix.respond-to(extra-small) {
+@media screen and (max-width: 480px) {
     section.spot .content .row {
         flex-direction: column;
         display: flex;
         align-items: center;
+        gap: 20px;
     }
 
+    section.spot .content .row .box,
     section.spot .content .row .col-4 {
     position: relative;
-    width: 94%;
+    width: 100%;
     background-color: var.$white;
     padding-left: 24px;
     padding-right: 24px;
@@ -487,17 +422,12 @@ p.innerp.orange.mb-2 {
 
 }
 
-@include mix.respond-to(tiny) {
+@media screen and (max-width: 480px) {
    p.innerp.orange.mb-2 {
     height: 40px;
     padding-bottom: 15px;
     border-bottom: var.$primary-color 2px dashed;
 }
-
- section.spot .content .row .box {
-        border-radius: 0 20px 0 20px;
-        width: 94%;
-    }
 
 
 
@@ -510,71 +440,9 @@ p.innerp.orange.mb-2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    section.spot {
-  position: relative;
-  background-color: #f7f7f7;
-  padding-bottom: 2vw;
-}
-
-section.spot .title {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-130px);
-}
-
-section.spot .title .pic {
-  position: relative;
-  z-index: 4;
-  max-width: 130px;
-  transform: translateY(-10px);
-}
-
-section.spot .title h2 {
-  font-size: clamp(40px, 4vw, 60px);
-  font-weight: bold;
-  text-align: center;
-  color: #000;
-  line-height: 1;
-}
-
-section.spot .subtitle {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  color: #000;
-  transform: translateY(-130px);
-}
-
-section.spot .content {
-  transform: translateY(-50px);
-  position: relative;
-  padding-left: 40px;
-  border-left: 2px solid #0e6091;
-}
-
 section.spot .content .num {
   position: absolute;
-  background-color: #0e6091;
+  background-color: var.$spot-blue;
   width: 4vw;
   height: 4vw;
   max-width: 45px;
@@ -593,7 +461,7 @@ section.spot .content .num p {
   line-height: 0;
   font-size: 36px;
   font-size: clamp(24px, 2.25vw, 36px);
-  color: #fff;
+  color: var.$white;
   transform: translateY(1px);
   font-weight: bold;
   font-family: "Arial";
@@ -601,7 +469,7 @@ section.spot .content .num p {
 
 section.spot .content .bus {
   position: absolute;
-  background-color: #f7f7f7;
+  background-color: var.$light-gray;
   width: 55px;
   height: 65px;
   bottom: -7px;
@@ -621,7 +489,7 @@ section.spot .content .subname {
   font-weight: 500;
   line-height: 1.33;
   text-align: left;
-  color: #0e6091;
+  color: var.$spot-blue;
   padding-left: 5px;
 }
 
@@ -638,51 +506,94 @@ section.spot .content .cards {
 }
 
 section.spot .content .cards .card {
-  display: flex;
-  flex-direction: column;
-  min-width: 272px;
-  margin-top: 35px;
-  width: 272px;
-  box-shadow: -0.2px 3px 8px 0 rgba(0, 0, 0, 0.35);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 272px;
+    margin-top: 35px;
+    width: 272px;
+    box-shadow: -0.2px 3px 8px 0 rgba(0,0,0,.35)
 }
+
 
 section.spot .content .cards .card .pic {
-  position: relative;
-  width: 100%;
-  padding-bottom: 65%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    position: relative;
+    line-height: 0; // 移除圖片下方的間隙，確保遮罩高度精準
 }
+
+section.spot .content .cards .card .pic img {
+    width: 100%;
+    height: 151.88px;
+}
+
+// section.spot .content .cards .card .pic::before {
+//   transition: 0.25s linear;
+//   opacity: 0;
+//   position: absolute;
+//   content: "";
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   width: 32px;
+//   height: 47px;
+//   top: 50%;
+//   left: 50%;
+//   z-index: 1;
+//   transform: translate(-50%, -50%);
+//   background-image: url(../images/icon-map.svg);
+// }
+
 
 section.spot .content .cards .card .pic::before {
-  transition: 0.25s linear;
-  opacity: 0;
-  position: absolute;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 32px;
-  height: 47px;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  background-image: url(../images/icon-map.svg);
+    -webkit-transition: .25s linear;
+    transition: .25s linear;
+    opacity: 0;
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 32px;
+    height: 47px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-image: url(../images/icon-map.svg)
 }
 
+
+// section.spot .content .cards .card .pic img::after {
+//   transition: 0.25s linear;
+//   opacity: 0;
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgba(86, 121, 174, 0.75);
+// }
+
+
 section.spot .content .cards .card .pic::after {
-  transition: 0.25s linear;
-  opacity: 0;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(86, 121, 174, 0.75);
+    -webkit-transition: .25s linear;
+    transition: .25s linear;
+    opacity: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5679aebf;
 }
+
 
 section.spot .content .cards .card .og {
   background-color: #e15e24;
@@ -695,9 +606,7 @@ section.spot .content .cards .card .text {
   padding: 15px;
 }
 
-section.spot .content .cards .card .text .spotname {
-  margin-top: 17PX;
-}
+
 
 section.spot .content .cards .card .text .spotname .en,
 section.spot .content .cards .card .text .spotname .cn {
@@ -793,4 +702,115 @@ section.spot .odd {
 
 section.spot .odd .num {
   top: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 980px) {
+    section.transport .content .box .inner .links p::after {
+        display:none
+    }
+
+    section.spot {
+        padding-bottom: 16vw
+    }
+
+    section.spot .even,section.spot .odd {
+        padding-top: 60px
+    }
+
+    section.spot .even .num,section.spot .odd .num {
+        left: -19px;
+        top: 68px;
+    }
+
+    section.spot .title {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+
+    section.spot .title .pic {
+        max-width: 100px
+    }
+
+    section.spot .subtitle {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        font-size: 20px;
+        margin-bottom: 40px
+    }
+
+    section.spot .content {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        padding-left: 35px
+    }
+
+    section.spot .content .num {
+        left: -19px;
+    }
+
+    section.spot .content .bus .icon {
+        max-width: 30px
+    }
+
+    section.spot .content .cards {
+        gap: 10px;
+        padding-bottom: 30px
+    }
+
+    section.spot .content .cards .card {
+        margin-top: 30px;
+        width: 272px;
+        margin-right: 10px;
+        margin-left: 5px;
+        -webkit-box-shadow: -0.2px 1px 10px 0 rgba(0,0,0,.5);
+        box-shadow: -0.2px 1px 10px 0 rgba(0,0,0,.5)
+    }
+}
+
+@media screen and (max-width: 980px)and (max-width: 365px) {
+    section.spot .content {
+        padding-left:20px
+    }
+
+    section.spot .content .cards .card {
+        width: 240px;
+        min-width: 240px;
+        margin-right: 0px;
+        margin-left: 0px
+    }
+}
+
+@media screen and (max-width: 980px) {
+    section.spot .content .location {
+        margin-top:24px
+    }
+
+    section.spot .content .location p {
+        font-size: 18px
+    }
 }

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;family=Noto+Sans+SC:wght@100;300;400;500;700;900&amp;family=Noto+Serif+SC:wght@400;500;700;900&amp;family=Roboto&amp;display=swap" />
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/index.css" /> -->
@@ -84,7 +84,6 @@
 
                         <nav id="nav_lang" class="nav_lang_wrap" aria-label="切換語言">
                             <a class="nav_lang_parent tc_nav_parent"  href="#" title="語言版本" role="button"
-                            <a class="nav_lang_parent tc_nav_parent"  href="javascript:;" title="語言版本" role="button"
                                 aria-haspopup="true" aria-expanded="false">語言版本</a>
                             <ul class="nav_lang tc_nav_lang" aria-label="語言清單">
                                 <li><a href="English/index.html" title="English" lang="en">English</a></li>
@@ -1451,10 +1450,9 @@
                     </a>
                     <a class="station" href="#spot6" role="listitem" aria-label="國際廣場（福朋喜來登）站">
                         <div class="pic"><img src="./images/icon-bus-newgreen.svg" alt="" /></div>
-                        <p>
-                            國際廣場</br>(福朋喜來登)
-                        </p>
+                        <p>國際廣場</br>(福朋喜來登)</p>
                     </a>
+                    
                 </div>
                 <div class="map"><img src="./images/map.png" alt="澎湖空港快線路線地圖" /></div>
             </div>
@@ -1466,21 +1464,24 @@
                 <h2>乘車資訊</h2>
             </div>
             <div class="content">
-                <div class="row">
-                    <div class="box">
-                        <div class="title">
-                            <div class="pic"><img src="./images/icon-fare.svg" /></div>
-                            <p>票價資訊</p>
-                        </div>
+                <div class="row g-4"> 
+                    <div class="col-12 col-md-6">
+                        <div class="box">
+                            <div class="title">
+                                <div class="pic"><img src="./images/icon-fare.svg" /></div>
+                                <p>票價資訊</p>
+                            </div>
                         <div class="inner">
                             <div class="main mb-2">
                                 票價
                                 <span>30</span> 元/單程
                             </div>
-                            <div class="orange">即日起至114年10月31日止，憑電子票證享半價優惠！</div>
+                                <div class="orange">即日起至114年10月31日止，憑電子票證享半價優惠！</div>
+                        </div>
                         </div>
                     </div>
-                    <div class="box hotline">
+                    <div class="col-md-6">
+                    <div class="box hotline ">
                         <div class="title">
                             <div class="pic"><img src="./images/icon-information.svg" alt="服務專線圖示" /></div>
                             <p>服務專線</p>
@@ -1497,6 +1498,8 @@
                         </div>
                     </div>
                 </div>
+                </div>
+        
 
 
                 <div class="box">
@@ -1519,8 +1522,9 @@
                 </div>
 
                 <!-- 4張套票 -->
-                <div class="row" id="ticket-info">
-                    <div class="box col-4">
+                <div class="row g-4" id="ticket-info">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box h-100">
                         <div class="title">
                             <div class="pic"><img src="./images/icon-fare.svg" /></div>
                             <p>A款套票</p>
@@ -1539,8 +1543,10 @@
                                 <i class="fas fa-shopping-cart "></i>立即購買
                             </button>
                         </div>
+                        </div>
                     </div>
-                    <div class="box col-4" aria-label="B款套票">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box h-100" aria-label="B款套票">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
@@ -1560,9 +1566,11 @@
                                 <i class="fas fa-shopping-cart "></i>立即購買
                             </button>
                         </div>
+                        </div>
                     </div>
 
-                    <div class="box col-4" aria-label="C款套票">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box h-100" aria-label="C款套票">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
@@ -1582,9 +1590,11 @@
                                 <i class="fas fa-shopping-cart "></i>立即購買
                             </button>
                         </div>
+                        </div>
                     </div>
 
-                    <div class="box col-4" aria-label="D款套票">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="box h-100" aria-label="D款套票">
                         <div class="title">
                             <div class="pic">
                                 <img src="./images/icon-fare.svg" />
@@ -1604,6 +1614,7 @@
                                 <i class="fas fa-shopping-cart"></i>立即購買
                             </button>
                         </div>
+                    </div>
                     </div>
 
                 </div>
@@ -2175,8 +2186,11 @@
     <script src="script.js"></script>
     <script src="./lib/jquery_kf.js"></script>
     <script type="text/javascript" src="js/index.js?2577"></script>
+    <script src="sass/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
 
+</html>
+</html>
 </html>

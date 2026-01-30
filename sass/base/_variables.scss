@@ -3,7 +3,6 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// Responsive breakpoints
 $breakpoint-tiny: 365px;
 $breakpoint-extra-small: 375px;
 $breakpoint-mobile: 375px;
@@ -16,19 +15,61 @@ $breakpoint-xl: 1280px;
 $breakpoint-desktop: 1920px;  // 電腦版斷點
 $breakpoint-max: 1920px;
 
+
+// // 您的自定義斷點
+// $breakpoint-tiny: 365px;
+// $breakpoint-extra-small: 375px;
+// $breakpoint-mobile: 375px;
+// $breakpoint-small: 450px;
+// $breakpoint-tablet: 768px;
+// $breakpoint-medium: 980px;
+// $breakpoint-medium-plus: 981px;
+// $breakpoint-large: 1200px;
+// $breakpoint-xl: 1280px;
+// $breakpoint-desktop: 1920px;
+// $breakpoint-max: 1920px;
+
+// // 覆寫 Bootstrap 的斷點（使用 @use 的方式）
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: $breakpoint-mobile,      // 375px
+//   md: $breakpoint-tablet,       // 768px
+//   lg: $breakpoint-large,        // 1200px
+//   xl: $breakpoint-xl,           // 1280px
+//   xxl: $breakpoint-desktop      // 1920px
+// );
+
+// // 如果需要覆寫容器寬度
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+
+
 // Color system
 $primary-color: #db3b06;
+$primary: $primary-color; // 新增別名
 $secondary-color: #bbd269;
+$secondary: $secondary-color; // 新增別名
+$secondary_l1: #ffeca1; // 新增 hover 用的淺色 (參考原本的 highlight-yellow)
+
 $dark-green: #6d865f;
 $highlight-yellow: #ffeca1;
 $highlight-yellow-hover: #ffdb69;
 $link-blue: #0074d3;
-$text-color: #000;
+$spot-blue: #0e6091;
+$text-color: #000000;
+$body-color: #f9f9f9; // 新增別名
 $white: #fff;
-$light-gray: #f5f5f5;
+$light-gray: #f7f7f7;
 
 // Typography
 $font-family-primary: "Microsoft JhengHei", sans-serif;
+$font-primary: $font-family-primary; // 新增別名
 $font-size-base: 16px;
 
 // Spacing

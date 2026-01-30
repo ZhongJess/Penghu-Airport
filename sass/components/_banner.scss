@@ -1,11 +1,11 @@
 // Banner Section Styles
+@use '../base/variables' as var;
 @use '../base/mixins' as mix;
 
 section.banner {
     z-index: 2;
     position: relative;
     margin-top: 140px;
-    background-color: #f9f9f9;
 }
 
 @include mix.respond-to(large) {

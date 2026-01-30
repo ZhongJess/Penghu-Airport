@@ -28,6 +28,8 @@ section.transport>.title {
     align-items: center;
     justify-content: center;
     transform: translateY(-130px);
+    margin-bottom: 28px;
+
 }
 
 section.transport>.title .pic {
@@ -56,14 +58,15 @@ section.transport .subtitle {
 section.transport .content {
     max-width: 960px;
     transform: translateY(-100px);
-    width: 90%;
+    // width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 section.transport .content .row {
-    display: flex;
-    gap: 2%;
-    justify-content: space-evenly;
+    // 移除自定義 flex 屬性，讓 Bootstrap 的 .row 處理網格
 }
 
 section.transport .content .row .box .title {
@@ -96,6 +99,12 @@ section.transport .content .row .box .title span {
     color: var.$white;
 }
 
+
+section.transport .content .row .box .inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 section.transport .content .row .box .inner .main {
     font-family: var.$font-family-primary;
     font-size: 20px;
@@ -126,17 +135,17 @@ section.transport .content .row .box .inner .point {
 
 section.transport .content .row .box {
     position: relative;
-    width: 47%;
     background-color: var.$white;
     padding-left: 24px;
     padding-right: 24px;
     min-height: 230px;
-    display: flex;
+    display: block;
     align-items: center;
     border-radius: 0 30px 0 30px;
     padding-top: 58px;
     padding-bottom: 25px;
 }
+
 
 section.transport .content .row .box .inner .point::after {
     content: "";
@@ -154,9 +163,7 @@ section.transport .content .row .hotline .main {
 }
 
 section.transport .content .box {
-    margin-top: 25px;
     position: relative;
-    width: 100%;
     background-color: var.$white;
     padding-left: 24px;
     padding-right: 24px;
@@ -341,26 +348,12 @@ section.transport .content .transportation .inner .point::after {
 }
 
 p.innerp.orange.mb-2 {
-    min-height: 87px;
-    padding-bottom: 15px;
+    min-height: 60px;
+    margin-bottom: 15px;
     border-bottom: var.$primary-color 2px dashed;
 }
 
-section.transport .content .row .col-4 {
-    position: relative;
-    width: 22%;
-    background-color: var.$white;
-    padding-left: 24px;
-    padding-right: 24px;
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    border-radius: 0 30px 0 30px;
-    padding-top: 58px;
-    padding-bottom: 25px;
-}
-
-@include mix.respond-to(small) {
+@media screen and (max-width: 980px) {
     section.transport {
         padding-bottom: 10vw;
     }
@@ -379,14 +372,9 @@ section.transport .content .row .col-4 {
         transform: translateY(0px);
         width: 95%;
     }
-    section.transport .content .row {
-        flex-direction: row;
-        gap: 1%;
-    }
 
     section.transport .content .row .box {
         border-radius: 0 20px 0 20px;
-        width: 47%;
     }
     section.transport .content .row .box .title .pic {
         max-width: 20px;
@@ -423,38 +411,10 @@ section.transport .content .row .col-4 {
         text-decoration-color: var.$primary-color;
         text-underline-offset: 5px;
     }
-}
 
-@include mix.respond-to(small-450) {
-    section.transport .content .box .inner .links p {
-        width: 88%;
-    }
-}
-
-@include mix.respond-to(small) {
     section.transport .content .box .inner .links p::after {
         display: none;
     }
-}
-
-@include mix.respond-to(small) {
-    section.transport .content .row {
-        flex-direction: row;
-    }
-
-    section.transport .content .row .col-4 {
-    position: relative;
-    width: 47%;
-    background-color: var.$white;
-    padding-left: 24px;
-    padding-right: 24px;
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    border-radius: 0 30px 0 30px;
-    padding-top: 58px;
-    padding-bottom: 25px;
-}
 
 p.innerp.orange.mb-2 {
     min-height: 0px;
@@ -464,40 +424,25 @@ p.innerp.orange.mb-2 {
 
 }
 
-@include mix.respond-to(extra-small) {
-    section.transport .content .row {
-        flex-direction: column;
+@media screen and (max-width: 480px){
+    section.transport .content .row .box {
+        // 移除 width: 100%，讓 Bootstrap 的 col-12 處理
+        padding-left: 24px;
+        padding-right: 24px;
+        min-height: 230px;
         display: flex;
         align-items: center;
+        border-radius: 0 30px 0 30px;
+        padding-top: 58px;
+        padding-bottom: 25px;
     }
-
-    section.transport .content .row .col-4 {
-    position: relative;
-    width: 94%;
-    background-color: var.$white;
-    padding-left: 24px;
-    padding-right: 24px;
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    border-radius: 0 30px 0 30px;
-    padding-top: 58px;
-    padding-bottom: 25px;
 }
 
-}
-
-@include mix.respond-to(tiny) {
-   p.innerp.orange.mb-2 {
+p.innerp.orange.mb-2 {
     height: 40px;
     padding-bottom: 15px;
     border-bottom: var.$primary-color 2px dashed;
 }
-
- section.transport .content .row .box {
-        border-radius: 0 20px 0 20px;
-        width: 94%;
-    }
 
     .header .row .right {
         width: 100%;
@@ -507,4 +452,10 @@ p.innerp.orange.mb-2 {
     height: 48px;
 }
 
+
+
+@include mix.respond-to(small-450) {
+    section.transport .content .box .inner .links p {
+        width: 88%;
     }
+}
