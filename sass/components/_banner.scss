@@ -5,19 +5,7 @@
 section.banner {
     z-index: 2;
     position: relative;
-    margin-top: 140px;
-}
-
-@include mix.respond-to(large) {
-    section.banner {
-        margin-top: 127px;
-    }
-}
-
-@include mix.respond-to(medium) {
-    section.banner {
-        margin-top: 123px;
-    }
+    padding-block-start: 120px;
 }
 
 section.banner .bg {
@@ -91,7 +79,6 @@ section.banner .scroll {
 
 @include mix.respond-to(small) {
     section.banner {
-        margin-top: 50px;
         padding-bottom: 12%;
     }
     section.banner .bg {
@@ -160,20 +147,9 @@ section.banner .scroll {
 section.banner {
   z-index: 2;
   position: relative;
-  margin-top: 140px;
   background-color: #f9f9f9;
 }
 
-@media screen and (max-width: 1680px) {
-  section.banner {
-    margin-top: 127px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  section.banner {
-    margin-top: 123px;
-  }
-}
 section.banner .bg {
   background-size: cover;
   background-repeat: no-repeat;

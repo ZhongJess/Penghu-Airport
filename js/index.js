@@ -86,21 +86,6 @@ $(document).ready(function() {
     }
 
 // ...existing code...
-$('.menuBtn').on('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        $(this).click();
-    }
-})
-
-// ...existing code...
-$('.menuBtn, .close_btn').on('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        $(this).click();
-    }
-});
-// ...existing code...
 
 function closeLightbox() {
   document.querySelector('.lightbox').style.display = 'none';
@@ -232,60 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.querySelector('.menuBtn');
-  const header = document.querySelector('#header');
-
-  // 點擊手機選單按鈕
-  menuBtn.addEventListener('click', () => {
-    header.classList.toggle('menu-open'); // 根據你的樣式設定修改 class 名稱
-  });
-
-  // 鍵盤 Enter / Space 操作 menuBtn
-  menuBtn.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault(); // 防止頁面捲動
-      menuBtn.click();    // 模擬 click 行為
-    }
-  });
-
-  function toggleMenu(forceOpen) {
-    const isOpen = header.classList.contains('menu-open');
-    const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !isOpen;
-    header.classList.toggle('menu-open', shouldOpen);
-    menuBtn.setAttribute('aria-expanded', String(shouldOpen));
-  }
-
-  // 點擊開關手機選單
-  menuBtn.addEventListener('click', () => {
-    toggleMenu();
-  });
-
-  // 鍵盤 Enter / Space 開關選單
-  menuBtn.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleMenu();
-    }
-  });
-
-  // ✅ 當 menuBtn 失焦（Tab 跳走）就收起選單
-  menuBtn.addEventListener('blur', () => {
-    // 延遲一點檢查焦點是否已經跳出 header 區域
-    setTimeout(() => {
-      const active = document.activeElement;
-      if (!header.contains(active)) {
-        toggleMenu(false);
-      }
-    }, 10);
-  });
-});
 
 
 

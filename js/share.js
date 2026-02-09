@@ -1,85 +1,187 @@
+// $(document).ready(function() {
+//     new WOW().init()
+//     var $window = $(window)
+
+//     //錨點下滑
+//     $("a[href^='#']").click(function() {
+//         //console.log($(this.hash).offset().top-40)
+//         let hashDistance = $(this.hash).offset().top - 100
+//         $('html,body').stop().animate({
+//             scrollTop: hashDistance
+//         }, 1000)
+//         return false
+//     })
+
+//     function updateOverflow() {
+//         document.body.style.overflow = 'auto' // 啟用捲動
+//         $('.header').removeClass('click')
+//         $('.menuBtn').removeClass('closeBtn')
+//     }
+
+//     // 監聽視窗大小變化事件
+//     window.addEventListener('resize', updateOverflow)
+
+
+
+//     $(window).on('scroll resize', function () {
+//   var windowWidth = window.innerWidth;
+//   var scrollTop = $(this).scrollTop();
+
+//   // === 小於 980px：完全由 menu icon 控制 ===
+//   if (windowWidth < 980) {
+//     $('.header')
+//       .removeClass('scroll is-compact');
+//     $('.header .right')
+//       .addClass('none');
+//     return; // ❗直接中斷，不進 scroll 判斷
+//   }
+
+//   // === 大於等於 980px 才處理 scroll ===
+//   if (scrollTop > 134) {
+//     $('.header').addClass('scroll');
+
+//     // 980–1200
+//     if (windowWidth <= 1200) {
+//       $('.header .right').removeClass('none');
+//       $('.header').removeClass('is-compact');
+//     }
+//     // >1200
+//     else {
+//       $('.header .right').addClass('none');
+//       $('.header').addClass('is-compact');
+//     }
+
+//   } else {
+//     // 尚未捲動
+//     $('.header')
+//       .removeClass('scroll is-compact');
+//     $('.header .right')
+//       .removeClass('none');
+//   }
+// }).trigger('scroll');
+
+
+
+//     $('.gotop').click(function() {
+//         $('html, body').animate({
+//             scrollTop: 0, //屬性
+//         })
+//         return false
+//     })
+
+// })
+
+
+
+
+
+
+
 $(document).ready(function() {
-    new WOW().init()
-    var $window = $(window)
+    new WOW().init();
 
-    //錨點下滑
-    $("a[href^='#']").click(function() {
-        //console.log($(this.hash).offset().top-40)
-        let hashDistance = $(this.hash).offset().top - 100
-        $('html,body').stop().animate({
-            scrollTop: hashDistance
-        }, 1000)
-        return false
-    })
+    const $window = $(window);
+    const $header = $('.header');
+    const $headerRight = $('.header .right');
+    const $goTop = $('.gotop'); // 選取 gotop 按鈕
 
-    let isOverflowHidden = false
+    // 1. 處理 Header 與 GoTop 顯示邏輯
+    function handleScrollEffects() {
+        const windowWidth = window.innerWidth;
+        const scrollTop = $window.scrollTop();
 
-    function updateOverflow() {
-        document.body.style.overflow = 'auto' // 啟用捲動
-        $('.header').removeClass('click')
-        $('.menuBtn').removeClass('closeBtn')
+        // --- GoTop 顯示/隱藏邏輯 (捲動超過 300px 顯示) ---
+        if (scrollTop > 300) {
+            $goTop.fadeIn(300); // 或是用 $goTop.addClass('active')
+        } else {
+            $goTop.fadeOut(300);
+        }
+
+        // --- 原有的 Header 邏輯 ---
+        if (windowWidth < 980) {
+            $header.removeClass('scroll is-compact');
+            $headerRight.addClass('none');
+            return; 
+        }
+
+        if (scrollTop > 134) {
+            $header.addClass('scroll');
+            if (windowWidth <= 1200) {
+                $headerRight.removeClass('none');
+                $header.removeClass('is-compact');
+            } else {
+                $headerRight.addClass('none');
+                $header.addClass('is-compact');
+            }
+        } else {
+            $header.removeClass('scroll is-compact');
+            $headerRight.removeClass('none');
+        }
     }
 
-    $('.menuBtn').click(function(e) {
-        e.preventDefault()
-        $(this).toggleClass('closeBtn')
-        $('.header').toggleClass('click')
-        
-        // 處理 Body 捲動鎖定
-        if (window.innerWidth <= 980) {
-            isOverflowHidden = !isOverflowHidden
-            document.body.style.overflow = isOverflowHidden ? 'hidden' : 'auto'
-        }
-        
-        $('.gotop').removeClass('show')
-    })
+    // 2. 監聽捲動與縮放
+    $window.on('scroll resize', handleScrollEffects).trigger('scroll');
 
-    // 監聽視窗大小變化事件
-    window.addEventListener('resize', updateOverflow)
+    // 3. 點擊 GoTop 捲動回頂部
+    $goTop.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').stop().animate({ scrollTop: 0 }, 600);
+    });
+
+    // 4. 錨點平滑捲動
+    $("a[href^='#']:not(.gotop)").on('click', function(e) {
+        e.preventDefault();
+        const target = $(this.hash);
+        if (target.length) {
+            const hashDistance = target.offset().top - 100;
+            $('html, body').stop().animate({ scrollTop: hashDistance }, 1000);
+        }
+    });
+
+// 5. 漢堡選單點擊切換 (新增這段)
+    $('.menuBtn').on('click', function() {
+        $header.toggleClass('click'); // 讓選單出現/消失
+        $(this).toggleClass('closeBtn'); // 讓按鈕切換成 X
+
+        // 開啟選單時鎖定身體捲動，關閉時恢復
+        if ($header.hasClass('click')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    // 6. 視窗縮放重設選單 (優化原本的第 5 點)
+    $window.on('resize', function() {
+        if (window.innerWidth >= 980) {
+            $('body').css('overflow', 'auto');
+            $header.removeClass('click');
+            $('.menuBtn').removeClass('closeBtn');
+        }
+    });
+
+    // --- 5. 錨點平滑捲動 (補回原本的功能) ---
+    // 點擊 href 為 # 開頭的連結時，平滑捲動到目標位置
+    $("a[href^='#']:not(.gotop)").on('click', function(e) {
+        const target = $(this.hash);
+        if (target.length) {
+            e.preventDefault();
+            // 捲動時自動解鎖 body (防止在手機選單點擊後頁面鎖死)
+            $body.css('overflow', 'auto');
+            $header.removeClass('click');
+            $menuBtn.removeClass('closeBtn');
+
+            const hashDistance = target.offset().top - 100;
+            $('html, body').stop().animate({
+                scrollTop: hashDistance
+            }, 1000);
+        }
+    });
+
+    // --- 6. 初始化動畫套件 ---
+    if (typeof WOW === 'function') {
+        new WOW().init();
+    }
+
     
-    // 點擊選單連結後自動收合選單
-    $('.header nav a').click(function(e) {
-        // 不要阻止預設行為，否則錨點跳轉會失效
-        $('.menuBtn').removeClass('closeBtn')
-        $('.header').removeClass('click')
-        
-        if (window.innerWidth <= 980) {
-            if (isOverflowHidden) {
-                document.body.style.overflow = 'auto' // 啟用捲動
-            } else {
-                document.body.style.overflow = 'hidden' // 禁用捲動
-            }
-
-            isOverflowHidden = !isOverflowHidden // 切換當前狀態
-        }
-    })
-
-    $window
-        .on('scroll', function() {
-            if ($window.scrollTop() > 1200) {
-                $('.gotop').addClass('show')
-            } else {
-                $('.gotop').removeClass('show')
-            }
-        })
-        .scroll()
-    $window
-        .on('scroll', function() {
-            if ($window.scrollTop() > 134) {
-                $('.header .row .lang ').addClass('none')
-                $('.header').addClass('scroll')
-            } else {
-                $('.header .row .lang').removeClass('none')
-                $('.header').removeClass('scroll')
-            }
-        })
-        .scroll()
-
-    $('.gotop').click(function() {
-        $('html, body').animate({
-            scrollTop: 0, //屬性
-        })
-        return false
-    })
-
-})
+});
