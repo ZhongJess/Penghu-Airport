@@ -155,7 +155,7 @@
   height: 16px;
   width: 1px;
   left: 0;
-  top: 7px;
+  top: 12px;
   background-color: #3c3c3c;
 }
 
@@ -421,13 +421,6 @@ header.click .row .right .lang a {
   }
 }
 
-// Additional responsive styles from _responsive.scss
-@media (min-width: var.$breakpoint-medium-plus) {
-  .gotop:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
 
 @media screen and (max-width: var.$breakpoint-xl) {
   .header .nav ul {
