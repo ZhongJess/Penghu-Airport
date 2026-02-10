@@ -54,6 +54,8 @@
 
 .header .logo a {
   -webkit-tap-highlight-color: transparent;
+  display: block; // 確保連結完整包裹圖片，聚焦框才能正確顯示
+  line-height: 0; // 移除圖片下方的微小間隙
 }
 
 .header .right {
@@ -96,7 +98,7 @@
   position: relative;
   -webkit-transition: 0.25s linear;
   transition: 0.25s linear;
-  font-family: "Microsoft JhengHei";
+  font-family: var.$font-sans-serif;
 }
 
 .header .nav ul li a::before {
@@ -137,7 +139,7 @@
 
 .header .lang a {
   padding: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: #3c3c3c;
   line-height: 1;
   font-family: "Microsoft JhengHei";
@@ -289,7 +291,9 @@
     margin: 1rem;
   }
 
+  .lang-switch a,
   .lang-switch button {
+    display: inline-block;
     background: #005bb5;
     color: #fff;
     border: none;
@@ -299,8 +303,11 @@
     cursor: pointer;
     transition: background 0.2s;
     width: 85px;
+    text-decoration: none;
+    text-align: center;
   }
 
+  .lang-switch a:hover,
   .lang-switch button:hover {
     background: #c85027;
   }
@@ -337,21 +344,6 @@ header.click .row .right .lang {
 header.click .row .right .lang a {
   font-size: 16px;
   padding: 8px 12px;
-}
-
-// Focus styles for header elements
-.header .logo .pc:focus {
-  display: block;
-  outline: 2px solid #1976d2;
-  outline-offset: 2px;
-  background-color: #e3f2fd;
-}
-
-.header .logo .mobile:focus {
-  display: block;
-  outline: 2px solid #1976d2;
-  outline-offset: 2px;
-  background-color: #e3f2fd;
 }
 
 @media screen and (min-width: 980px) and (max-width: var.$breakpoint-large) {
@@ -440,7 +432,7 @@ header.click .row .right .lang a {
 @media screen and (max-width: var.$breakpoint-xl) {
   .header .nav ul {
     gap: 3%;
-    
+
   }
 
   .header .nav ul li a {
@@ -468,8 +460,8 @@ header.click .row .right .lang a {
   .header .row .logo a,
   .header .row .logo .mobile {
     display: block;
-  width: inherit;
-  height: inherit;
+    width: inherit;
+    height: inherit;
   }
 
   .header .row .right {
@@ -629,6 +621,7 @@ header.click .row .right .lang a {
     align-items: center;
     padding: unset;
   }
+
   .header .nav ul {
     display: flex;
     justify-content: center;
@@ -650,10 +643,12 @@ header.click .row .right .lang a {
     display: flex;
     margin: 1rem;
     gap: 1rem;
-    align-self: stretch;  /* 防止被父層置中造成縮起來 */
+    align-self: stretch;
+    /* 防止被父層置中造成縮起來 */
   }
 
   /* 2) 讓每顆按鈕等分寬度 */
+  .lang-switch a,
   .lang-switch button {
     flex: 1 1 0;
     min-width: 0;

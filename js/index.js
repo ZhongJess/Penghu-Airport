@@ -289,3 +289,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         window.addEventListener('DOMContentLoaded', animateSVG);
+
+
+
+
+
+
+
+        // 監聽所有 skip-link 獲得焦點的事件
+document.querySelectorAll('.skip-link').forEach(link => {
+    link.addEventListener('focus', function() {
+        // 取得要跳轉的目標 ID (例如 #main_bus)
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // 平滑捲動到該位置
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});

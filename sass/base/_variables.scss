@@ -67,6 +67,15 @@ $body-color: #f9f9f9; // 新增別名
 $white: #fff;
 $light-gray: #f7f7f7;
 
+
+
+//無障礙focus
+$a11y-focus-color: #3653E1;
+$black: #000000;
+$white: #ffffff;
+
+
+
 // Typography
 $font-family-primary: "Microsoft JhengHei", sans-serif;
 $font-primary: $font-family-primary; // 新增別名
@@ -80,3 +89,9 @@ $container-max-width: 960px;
 $z-header: 100;
 $z-banner: 2;
 $z-modal: 1000;
+
+
+//font
+$font-sans-serif:             "Microsoft Jhenghei", "微軟正黑體", "Trebuchet MS", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-sans-serif-en:          'Arial', "Helvetica Neue", Helvetica, sans-serif;
+$font-serif:                  Georgia, "Times New Roman", Times, serif;
