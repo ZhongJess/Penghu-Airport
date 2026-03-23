@@ -11,6 +11,7 @@
 
 對我而言，這不只是一個完成專案的過程，更像是一次回到基礎、重新校準設計與實作能力的練習。
 
+PEPO PAGE:[https://zhongjess.github.io/Penghu-Airport/](https://zhongjess.github.io/Penghu-Airport/)
 ---
 
 ## 📁 專案結構與樣式架構說明
@@ -49,5 +50,3 @@ TRAFFICBUS/
 ├── package.json
 └── README.md
 
-
-PEPO PAGE:[https://zhongjess.github.io/Penghu-Airport/](https://zhongjess.github.io/Penghu-Airport/)
